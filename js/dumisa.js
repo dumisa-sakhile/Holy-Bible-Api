@@ -765,3 +765,14 @@ document.onkeydown = function(evt) {
     }
 };
 // Close of the universal modal using the escape key
+
+
+function booksFetch(){
+
+fetch(`booksOfTheBible.json`)
+.then(res=>res.json())
+.then(booksData=>console.log(booksData))
+
+}
+
+booksFetch()

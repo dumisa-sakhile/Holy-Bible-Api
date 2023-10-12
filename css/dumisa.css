@@ -128,7 +128,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 30px;
 }
 
 .condensed {
@@ -172,13 +171,13 @@ h1{
 #biblePage{
   width: 100%;
   min-height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
+  flex-direction: column;
   background: inherit;
   align-self: flex-start;
   padding-top: 110px;
@@ -290,75 +289,7 @@ label{
   width: 100%;
 }
 
-details{
-  width: 90%;
-  border-radius: 4PX;
-  background: var(--smoke);
-}
 
-details div{
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  border-radius: 4PX;
-  background: var(--smoke);
-  color: var(--smoke);
-  margin-bottom: 10px;
-}
-
-summary{
-  border-radius: 4PX;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  -ms-grid-columns: auto 40%;
-  grid-template-columns: auto 40%;
-  padding-left: 20%;
-  height: 50px;
-  font-family: var(--roboto);
-  border-radius: 4PX;
-  font-size: .8rem;
-  background: var(--smoke);
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-summary span{
-  color: var(--background);
-  text-transform: capitalize;
-}
-
-.rotate{
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.equals{
-  gap: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
 
 .skeleton-mom{
   width: 340px;
@@ -720,11 +651,11 @@ button:hover,button:active {
   padding: 20px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
-  font-family: var(--sans);
+  /* background: var(--lime); */
   font-size: 1rem;
-  color: #000;
+  color: #fefefe;
   border-radius: 5px;
+  font-family: var(--raji);
 }
 
 #bibleContent :is(p:hover,p:active){
@@ -792,7 +723,40 @@ button:hover,button:active {
 }
 
 
+#chapters{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
 
+#chapters span{
+    align-self: flex-start;
+    display: grid;
+    place-items: center;
+    min-width: 70px;
+    max-width: 120px;
+    border-radius: 4px;
+    height: 50px;
+    color: #fefefe;
+    font-family: var(--raji);
+    text-transform: capitalize;
+    background: var(--lime);
+    padding: 10px;
+}
+
+#chapters :is(span:hover,span:active){
+    background: var(--tomato);
+}
 
 /* special classes start  */
 .full {
