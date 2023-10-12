@@ -1,0 +1,549 @@
+[
+    {
+        "name":"Unknown",
+        "quote":"Believe in yourself, you can do it.",
+        "image":"question_mark_black_24dp.svg"
+    },
+    {
+    "name": "Harper Lee",
+    "quote": "Try fighting with your head for a change. It's a good one, even if it does resist learning.", 
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    
+    },
+    {
+      "name": "Unknown",
+      "quote":  "Nothing is impossible when you put your mind to it.",
+      "image": "question_mark_black_24dp.svg"
+    },
+    {
+      "name": "King solomon",
+      "quote": "Fools despise correction, but the wise appreciates it.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Unknown",
+      "quote": "Don't waste your time trying to please people, you're better than that.",
+      "image":"question_mark_black_24dp.svg"
+    },
+    {
+      "name": "Unknown",
+      "quote": "Pain demands to be felt",
+      "image": "/question_mark_black_24dp.svg"
+    },
+    {
+      "name": "Just Smile",
+      "quote": "Don't blame people for disappointing you, blame yourself for expecting so much.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Unknown",
+      "quote": "One day you'll be a memory to some people, do your best to be a good one.",
+      "image": "/question_mark_black_24dp.svg"
+    },
+    {
+      "name": "Tj Quote",
+      "quote": "Don't lower your standards for anyone or anything. Self respect is important.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Johann Van Goethe",
+      "quote": "You can easily judge a character of a man by how he treats those who can do nothing for him.",
+    
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Sasquatch",
+      "quote": "Believe in yourself, even when no one else will.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Elon Musk",
+      "quote": "I think it's impossible for ordinary people to choose to be extraordinary",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Mark Twain",
+      "quote": "Anger is an acid that can do more harm to the vessel in which it is stored than to anything in which it is poured.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Darth Vader",
+      "quote": "Strong people don't put others down. They lift them up.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Hank Williams",
+      "quote":  "I'd rather be in deep dark grave and know that my poor soul was saved than to live in this world in a house of gold and deny my God and doom my soul.",
+      "image": "Williams Hank.png"
+    },
+    {
+      "name": "Marie Curie",
+      "quote":  "Life is not easy for any of us. But what of that? We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Tim Ferriss",
+      "quote":  "Tomorrow becomes never. No matter how small the task, take the first step now.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Unknown",
+      "quote":  "Being happy doesn't mean that everything is perfect. It means you've decided to look beyond the imperfections.",
+      "image": "/question_mark_black_24dp.svg"
+    },
+    {
+      "name": "Tim Ferriss",
+      "quote":  "What we fear the most is usually what we most need to do.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Quote Portray",
+      "quote": "One bad chapter doesn't mean that your story is over.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Confucius",
+      "quote":  "He who learns but doesn't think, is lost! He who thinks but doesn't learn is in great danger.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+        "name":"Confucius",
+        "quote":  "To know the truth is good. To love it is better. To delight in it is best.",
+        "image":"leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "George Carlin",
+      "quote":  "Don't teach your children how to read. Teach them to question what they read. Teach them to question everything.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Abraham Lincoln",
+      "quote":  "Perhaps a man's character is like a tree and his reputation like its shadow. The shadow is what we think of it; The tree is real.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "George Carlin",
+      "quote":  "Just cause you got monkey off your back doesn't mean the circus has left town",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Noam Chomsky",
+      "quote":  "Nobody is going to pour truth into your brain. It's something you have to find out yourself.",
+      "image": "noam Chomsky.png"
+    },
+    {
+      "name": "Ezra Pound",
+      "quote":  "A slave is one who waits for someone to come and set him free.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Alice Walker",
+      "quote": "The most common way people give up power, is by thinking they don't have any.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Age of Attitude",
+      "quote":  "Be strong enough to let go anyone who doesn't respect your feelings.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "The inner life",
+      "quote": "Never be controlled by these three things: Your past, money and people.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Growth Lodge",
+      "quote": "Don't put the key to your happiness in some else's pocket.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "The inner life",
+      "quote":  "Be yourself, people don't have to love you and you don't have to care.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "William Blake",
+      "quote": "It's easier to forgive an enemy than friend.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Noam Chomsky",
+      "quote":  "Optimism is a strategy for making a better future. Because unless you believe that the future can be better, it's unlikely you will step up and take responsibility for making it so. If you assume that there's no hope, you guarantee that there will be no hope. If you assume that there's an instinct to freedom, there are opportunities to change things, there's a change you can contribute to making a better world. The choice is yours.",
+      "image": "noam Chomsky.png"
+    },
+    {
+      "name": "George Bernard Shaw",
+      "quote":  "You use a mirror to see your face; use works of art to see your soul.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Thomas Paine",
+      "quote": "Those who expect to reap the blessings of freedom, must like men, undergo the fatigue of supporting it.",
+      "image": "thomas Paine.png"
+    },
+    {
+      "name": "Martin Luther",
+      "quote": "No person has the right to rain on your dreams.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Arthur Schopenhauer",
+      "quote": "To be alone is the fate of all greatest minds.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Arthur Schopenhauer",
+      "quote":  "A high degree of intellect tends to make a man unsocial.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Voltaire",
+      "quote": "History never repeats itself, man does.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "William Shakespeare",
+      "quote":  "A fool thinks himself to be wise, but a wise man knows himself to be a fool.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+        "name":"George Bernard Shaw",
+        "quote": "Beware of false knowledge, it's more perilous than ignorance.", 
+        "image":"/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Mark Twain",
+      "quote": "Age is an issue of mind over matter. If you don't mind, it doesn't matter.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Maya Angelou",
+      "quote": "If we lose love and self respect for each other, this is how we finally die.",
+      "image": "maya Angelou.png"
+    },
+    {
+      "name": "Ralph Waldo Emerson",
+      "quote":  "A mind once stretched by an idea, never returns to its original dimensions.",
+      "image": "Ralph Waldo Emerson.png"
+    },
+    {
+      "name": "Pablo Neruda",
+      "quote": "You can cut all the flowers but you cannot keep spring from coming.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Immanuel Kant",
+      "quote": "Look closely. The beauty may be small.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Bruce Lee",
+      "quote":  "The key to immortality is first living a life worth remembering.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "C.S. Lewis",
+      "quote": "You're never too old to set another goal or to dream a new one.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Confucius",
+      "quote": "The man who moves a mountain begins by carrying away small stones.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Edmund Burke",
+      "quote":  "Nobody made a greater mistake than he who did nothing because he could do only a little.",
+      "image": "Edmund Burke.png"
+    },
+    {
+      "name": "Abraham Maslow",
+      "quote":  "If you plan on being anything less than you are capable of being, you'll probably be unhappy all the days of your life.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Confucius",
+      "quote":  "You aren't paid according to how hard you work. You're paid according to how hard you are to replace.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Rumi",
+      "quote": "If all you can do is crawl, start crawling.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Tim Ferriss",
+      "quote": "Someday is a disease that will take your dreams to the grave with you.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Eric Hoffer",
+      "quote":  "Rudeness is the weak person's imitation of strength.",
+      "image": "Eric Hoffer.png"
+    },
+    {
+      "name": "Confucius",
+      "quote":  "Don't impose on others what you yourself do not desire.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Sophocles",
+      "quote": "Rather fail with honor than succeed by fraud.",
+      "image": "sophocles.png"
+    },
+    {
+      "name": "Marcus Aurelius",
+      "quote": "Waste no time arguing about what a good man should be. Be one.",
+      "image": "aurelius.png"
+    },
+    {
+      "name": "Anne Frank",
+      "quote":  "People who have a religion should be glad, for not everyone has the gift in believing in heavenly things.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Oscar Wilde",
+      "quote":  "True friends stab you in the front.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+        "name":"Benjamin Franklin",
+        "quote": "Beware of little expenses; a small leak will sink a great ship.",
+        "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Rabindranath Tagore",
+      "quote":  "Don't limit a child to your own learning, for she was born in another time.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Rabindranath Tagore",
+      "quote": "Beauty is simply reality seen with eyes of love.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Kahlil Gibran",
+      "quote": "If you love somebody, let them go, for if they return, there were always yours. If they don't, they never were.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Paulo Coelho",
+      "quote": "Don't waste your time with explanations: people only hear what they want to hear.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Anne Frank",
+      "quote": "Indolence may seem attractive, but toil gives gratification.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "George Orwell",
+      "quote": "If you loved someone, you loved him, and when you have nothing else to give, you still gave him love.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Carl Jung",
+      "quote": "Where wisdom reigns, there's no conflict between thinking and feeling.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Albert Einstein",
+      "quote": "Life isn't worth living, unless it is lived for someone else.",
+      "image": "einstein.png"
+    },
+    {
+      "name": "Franz Kafka",
+      "quote": "It often safer to be in chains than free.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Aldous Huxley",
+      "quote": "Beauty is worse than wine. It intoxicates both the holder and beholder.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Jane Austen",
+      "quote": "I was quit, but I was not blind.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Thomas Paine",
+      "quote":  "The real man smiles in trouble, gathers strength from distress and grows brave by reflection.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Confucius",
+      "quote": "Life is easy, but we insist on making it difficult.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Homer",
+      "quote": "In youth and beauty, wisdom is but rare.",
+      "image": "homer.png"
+    },
+    {
+      "name": "Plato",
+      "quote": "The measure of a man is what he does with power.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Zeno of Citium",
+      "quote": "Man conquers the world by conquering himself.",
+      "image": "zeno.png"
+    },
+    {
+      "name": "Confucius",
+      "quote":  "The man who asks a question is a fool for a minute, the one who doesn't ask is a fool for life.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Benjamin Franklin",
+      "quote": "Whatever begins in anger, ends in shame.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "The Eternal Truth",
+      "quote": "When you find no solution to a problem. It's probably not a problem to be solved. But rather a truth to be accepted.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Napoleon Hill",
+      "quote":  "If you cannot do great things, do small things in a great way.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Mohammad Ali",
+      "quote": "Don't count days, make the days count.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Lou Holtz",
+      "quote":  "Your talent determines what you can do.  Your motivation determines how much you're willing to do. Your attitude determines how well you do it.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "George Washington",
+      "quote":  "Happiness depends more upon the internal frame of a person's own mind not on the externals in the world.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Sir Winston Churchill",
+      "quote": "Some people's idea of free speech is that they are free to say what they like, but if anyone says anything back, that is an outrage.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Johann Wolfgang von Goethe",
+      "quote": "Behavior is a mirror in which anyone shows their his image.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Leonardo da Vinci",
+      "quote": "It had long come to my attention that people of accomplishment rarely sat back and let things happen to them. They went out and happened to the things.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Alexandre Dumas Jr",
+      "quote": "The difference between a genius and stupidity is,genius has its limits.",
+      "image": "Alexandre Dumas.png"
+    },
+    {
+      "name": "Tony Robbins",
+      "quote":  "Our culture teaches us that making significant changes takes a long time and is difficult to do. This is simply NOT true. Change happens in an instant. It's not a process- it's something you do in an instant by making a decision.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Carl Jung",
+      "quote":  "If the path before you is clear, you're probably on someone else's.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Aeschylus",
+      "quote": "It's in a character of very few men to honor without envy a friend who has prospered.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Mohatma Ghandhi",
+      "quote": "Action expresses priorities.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Dumisa",
+      "quote": "Impeferction sees impeferction. We tend to forget our own imperfections but remember those which abide in others.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Oprah Winfrey",
+      "quote":  "You define your own life. Don't let other people write your script.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Nido Qubein",
+      "quote": "Your present circumstances don't determine where you can go. They merely determine where you can start.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "E.E. Cummings",
+      "quote": "To be nobody but yourself in the world that is doing its best day and night to make you like everybody else means to fight the hardest battle which any human being can fight and never stop fighting.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Shakespeare",
+      "quote": "Laughing faces do not mean that there is absence of sorrow! But it means that they have the ability to deal with it.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Albert Einstein",
+      "quote": "I am grateful to all of those who said NO to me. It's because of them I did it myself.",
+      "image": "einstein.png"
+    },
+    {
+      "name": "Abraham Lincoln",
+      "quote":  "If friendship is your weakest point then you are the strongest person in the world.",
+      "image": "leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "William Arthur",
+      "quote": "Opportunities are like sunrise, if you wait too long you might miss them.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Growth Lodge",
+      "quote": "When you love someone more than they deserve, surely they'll hurt you more than you deserve.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Cicero",
+      "quote":  "Gratitude is not only the greatest of virtues, but the parent of all the others.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Marcus Aurelius",
+      "quote": "It never ceases to amaze me; we love ourselves more than other people, but care more about their opinions than our own.",
+      "image": "aurelius.png"
+    },
+    {
+      "name": "Maya Angelou'",
+      "quote":  "If you're always trying to be normal, you can never know how amazing you can be.",
+      "image": "maya Angelou.png"
+    },
+    {
+      "name": "Albert Camus",
+      "quote": "To be happy, we must not be too concerned with others.",
+      "image": "Albert Camus.png"
+    },
+    {
+      "name": "Bertrand Russell",
+      "quote":  "To be without some of the things you want is an indispensable part of happiness.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "George Bernard Shaw",
+      "quote": "Two percent of people think; three percent of people think they think; and ninety five percent of people rather die than think.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    },
+    {
+      "name": "Augustine of Hippo",
+      "quote":  "Yet we must say something when those who say most are saying nothing.",
+      "image": "/leaf-yellow-autumn-svgrepo-com.svg"
+    }
+      ]
