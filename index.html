@@ -1,6 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+
+<title>Holy Bible: World English Bible</title>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="keywords" content="Holy Bible, World English Bible, WEB, Bible, Holy" />
+
+<meta name="description" content="Holy Bible Api: World English Bible Version." />
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">  
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+<meta name="theme-color" content="#17181c" />
+
+<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+<!-- <meta http-equiv="X-Frame-Options" content="deny"> -->
+
+<link rel="stylesheet" href="css/dumisa.css">
+<link rel="stylesheet" href="css/media.css">
+
+<link rel="manifest" href="manifest.json"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/logo.svg">
+
+<script src="https://kit.fontawesome.com/6256a3c9dc.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <a href="https://dumisa-info.netlify.app" id="logo"><img src="images/logo.svg" alt=""></a>
+
+
+
 <!--Bible api-->
 <section id="biblePage">
-
 
     <article class="noshadow nobg">
     <p>Currently reading the Book of  <span class="condensed" id="bookName"></span> which has <span class="condensed" id="bookChapters"></span> Chapter(s).</p>
@@ -97,3 +143,23 @@
     <!--Bible api-->
     
     
+
+    <!-- universal pop-up -->
+<div class="universal-box flex-column gap-30 none" id="universal">
+
+  <h6 id="title" class="nokne">universal title</h6>
+  
+  <div class="flex-row"><p id="content"></p> <span id="universalOkay">ok</span></div>
+  </div>
+  <!-- universal pop-up end-->
+  
+  </body>
+  
+  
+  <script src="js/dumisa.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script src="pwa.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script src="sw.js" type="text/javascript" charset="utf-8"></script>
+  
+  </html>
