@@ -805,3 +805,6 @@ $("#select").addEventListener("click",bibleApi);
 $("#cancelChapters").addEventListener("click",()=>{
   none($("#books"));
 });
+
+
+none($("#books"));

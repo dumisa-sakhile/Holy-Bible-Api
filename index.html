@@ -45,10 +45,23 @@
 
 <!--Bible api-->
 <section id="biblePage">
+<br><br>
 
 
-    <article class="noshadow nobg">
-    <p>Currently reading the Book of  <span class="condensed" id="bookName"></span> which has <span class="condensed" id="bookChapters"></span> Chapter(s).</p>
+
+<fieldset>
+    
+  <legend>Chapter</legend>
+
+<input type="search" name="bibleInput" id="bibleInput" placeholder="Bible book" autocomplete="off" value="genesis" class="input"/>
+
+</fieldset>
+
+
+
+<br><br><br>
+    <article class="noshadow nobg none">
+    
       
     <h1 class="none">Holy Bible Api</h1>
       
@@ -58,7 +71,6 @@
       
     <fieldset class="fld">
     <legend class="lgl">Book Name</legend>
-    <input type="search" name="bibleInput" id="bibleInput" placeholder="Bible book" autocomplete="off" value="genesis" class="input"/>
     </fieldset>
       
     <fieldset class="fld" id="bibleNoFld">
@@ -97,7 +109,11 @@
     
     
     <div id="bibleContent"></div>
-    
+    <header id="pagination">
+      <button id="next">Chapter 1</button>
+      <p>The Book of  <span class="condensed" id="bookName"></span> which has <span class="condensed" id="bookChapters"></span> Chapter(s).</p>
+      <button id="back">Chapter 4</button>.
+      </header>
     
     <footer class="footer">
       
