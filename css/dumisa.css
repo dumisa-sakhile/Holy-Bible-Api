@@ -423,6 +423,35 @@ to{opacity: .9;
 }
 
 .footer-social{
+  width: 110px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  font-family: var(--raji);
+  text-transform: capitalize;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--background);
+  outline: none;
+  font-size: .9rem;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.footer-social{
   width: 50px;
   height: 50px;
   border-radius: 7px;
@@ -628,7 +657,7 @@ button:hover,button:active {
     max-height: 100%;
     border: .1px solid #222;
     padding: 10px;
-    background: #000;
+    background: var(--background);
     border-radius: 8px;
     gap: 20px;
 }
@@ -658,6 +687,7 @@ button:hover,button:active {
     cursor: grab;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(16px) saturate(180%);
+    font-size: .9rem;
 }
 
 #chapters .span-active{

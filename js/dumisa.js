@@ -76,7 +76,17 @@ setInterval(()=>{
 
 $$('.social-child').forEach(e=>e.addEventListener('click',()=>{ 
 e.stopPropagation();
-}))
+}));
+
+
+let allBookChapters = $("#bookChapters");
+let next = $("#next");
+let back = $("#back");
+let bibleInputNo = $("#bibleInputNo").value;
+
+bibleInputNo <=1 ? none(back) : grid(back);
+bibleInputNo <  allBookChapters.textContent ? grid(next) : none(next);
+
 
   
 //preventions
@@ -778,8 +788,6 @@ fetch(`booksOfTheBible.json`)
 .then(res=>res.json())
 .then(booksData=>{
 
-  console.log(booksData);
-
   booksData.map(book=>{
     let chapters = $("#chapters");
     let span = createEl('span');
@@ -831,9 +839,6 @@ $("#bibleInput").addEventListener("click",()=>{
 });
 
 
-
-
-
 let fullScreen = $$(".fullscreen");
 
 fullScreen.forEach(screen=>{
@@ -854,3 +859,16 @@ function toggleFullscreen() {
           });
   }
 }
+
+let next = $("#next");
+let back = $("#back");
+
+next.addEventListener("click",()=>{
+  $("#bibleInputNo").value = Number($("#bibleInputNo").value) + 1;
+  bibleApi();
+});
+
+back.addEventListener("click",()=>{
+  $("#bibleInputNo").value = Number($("#bibleInputNo").value) - 1;
+  bibleApi();
+});
