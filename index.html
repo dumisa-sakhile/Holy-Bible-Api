@@ -45,13 +45,14 @@
 
 <!--Bible api-->
 <section id="biblePage">
-<br><br>
 
+<br><h1>The Holy Bible</h1><br>
 
+<div id="query">
 
 <fieldset>
     
-  <legend>Chapter</legend>
+<legend>The Book Of :</legend>
 
 <input type="search" name="bibleInput" id="bibleInput" placeholder="Bible book" autocomplete="off" value="genesis" class="input"/>
 
@@ -59,35 +60,20 @@
 
 
 
-<br><br><br>
-    <article class="noshadow nobg none">
+<fieldset>
     
-      
-    <h1 class="none">Holy Bible Api</h1>
-      
-    <main class="whole flex-column gap">
-    
-    <div class="bible-search">
-      
-    <fieldset class="fld">
-    <legend class="lgl">Book Name</legend>
-    </fieldset>
-      
-    <fieldset class="fld" id="bibleNoFld">
-    <legend class="lgl">Chapter</legend>
-    <input type="number" name="bibleInputNo" id="bibleInputNo" placeholder="Chapter" autocomplete="off" min="1" max="" value="1" class="input"/>
-    </fieldset>
-    
-    <span class="material-icons none" id="bibleBtn">search</span>
-    
-    </div>
-    
-    <ul id="bibleSuggestions"></ul>
-    
-    </main>
-    
-    </article>
+  <legend>Chapter :</legend>
+  
+  <input type="number" name="bibleInputNo" id="bibleInputNo" placeholder="Chapter" autocomplete="off" min="1" max="" value="1" class="input"/>
 
+  
+  </fieldset>
+
+</div>
+
+<br><br>
+   
+<a href="https://dumisa-info.netlify.app" id="logo"><img src="images/logo.svg" alt=""></a>
 
   <section id="books">
 
@@ -106,7 +92,8 @@
 </div>
 
   </section>
-    
+   
+  
     
     <div id="bibleContent"></div>
     <header id="pagination">
@@ -117,11 +104,11 @@
     
     <footer class="footer">
       
-    <p>Translation: <span class="condensed" id="bookTrans"></span> Copyright: <span class="condensed" id="bookRight"></span></p>
+    <p>Translation: <span class="highlight" id="bookTrans"></span> Copyright: <span class="highlight" id="bookRight"></span></p>
     
-    <p><span class="condensed">NB: </span>Changing the number (next to the book name) opens another book chapter.</p>
+    <p><span class="highlight">NB: </span>Changing the number (next to the book name) opens another book chapter.</p>
     
-    <p>Type the name of the book at <span class="condensed">book name</span> field and click on the suggestion that corresponds to it. Use  <span class="condensed">chapter</span> to change the chapter of the current book!</p>
+    <p>Type the name of the book at <span class="highlight">book name</span> field and click on the suggestion that corresponds to it. Use  <span class="highlight">chapter</span> to change the chapter of the current book!</p>
     
     <!-- social media -->
     <div class="flex-row-wrap">
@@ -166,10 +153,13 @@
     </div>
     <!-- social media -->
       
-    <br>
-    <p class="flex-row nogap"><span class="condensed">&nbsp;&copy;</span>&nbsp;Dumisa&nbsp; <span class="reservrYear"></span>.&nbsp;All&nbsp;rights&nbsp;reserved.</p>
-    
-    <img src="images/up.svg" alt="go up" title="Go To The Top" class="icon-up">
+    <span class="condensed fullscreen"><br>FullScreen Mode Toggle</span>
+<br>
+<p class="flex-row nogap"><span class="highlight">&nbsp;&copy;</span>&nbsp;<a href="https://dumisa-info.netlify.app/" class="highlight" target="_blank">Dumisa</a>&nbsp; <span class="reservrYear"></span>.&nbsp;All&nbsp;rights&nbsp;reserved.</p>
+
+<span class="material-icons icon-up" alt="go up" title="Go To The Top">
+  arrow_upward
+</span>
     
     </footer>
     

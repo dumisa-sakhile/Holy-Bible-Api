@@ -170,6 +170,7 @@ let bibleInputNo = $('#bibleInputNo').value;
 let url;
 let bookChapters = $("#bookChapters");
 
+
 if(bibleInput.toLowerCase() === '2 john'){
 
   url = `https://bible-api.com/2john+1:1-13`;
@@ -178,6 +179,11 @@ if(bibleInput.toLowerCase() === '2 john'){
 else if(bibleInput.toLowerCase() === '3 john'){
 
   url = `https://bible-api.com/3john+1:1-14`;
+
+}
+else if(bibleInput.toLowerCase() === 'obadiah'){
+
+  url = `https://bible-api.com/obadiah+1:1-21`;
 
 }
 else if(bibleInput.toLowerCase() === 'jude'){
@@ -680,6 +686,9 @@ outputBible.verses.map(e=>{
   paragraph.textContent =`v${Number((index + 1))}: ${e}`;
   
   bibleContent.append(paragraph);
+
+  flex($("#pagination"));
+
   
 })
 
@@ -728,11 +737,11 @@ if (Number($('#bibleInputNo').value) > Number($('#bookChapters').textContent)) {
   $('#bibleInputNo').value = 1;
 
   universalOn(7000, 'Chapters number exceeded', `please note that this chapter has only ${$('#bookChapters').textContent}, please do not exceed this range!`);
-  
+  none($("#pagination"));
   bibleApi();
 
 } else {
-
+  none($("#pagination"));
   bibleApi();
 
 }
@@ -801,10 +810,47 @@ fetch(`booksOfTheBible.json`)
 
 booksFetch();
 
-$("#select").addEventListener("click",bibleApi);
+$("#select").addEventListener("click",()=>{
+  none($("#books"));
+  bibleApi();
+  $$(".footer").forEach(foot=>{
+    none(foot);
+  });
+});
+
 $("#cancelChapters").addEventListener("click",()=>{
   none($("#books"));
 });
 
 
 none($("#books"));
+
+
+$("#bibleInput").addEventListener("click",()=>{
+  flex($("#books"));
+});
+
+
+
+
+
+let fullScreen = $$(".fullscreen");
+
+fullScreen.forEach(screen=>{
+  screen.addEventListener('click',toggleFullscreen)
+})
+
+
+function toggleFullscreen() {
+  if (document.fullscreenElement) {
+      // If there's an element in fullscreen, exit fullscreen
+      document.exitFullscreen();
+  
+  } else {
+      // If not in fullscreen, request fullscreen on the document
+      document.documentElement.requestFullscreen()
+          .catch(err => {
+              console.error('Failed to enter fullscreen:', err);
+          });
+  }
+}

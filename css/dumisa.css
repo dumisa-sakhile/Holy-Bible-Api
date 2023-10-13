@@ -88,7 +88,7 @@
 }
 
 body {
-  background-color: var(--background);background: #fefefe;
+  background-color: var(--background);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -159,7 +159,7 @@ body .footer{
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  background-color: transparent;
+  background: var(--background);
   border-radius: 8px 8px 0 0;
   gap: 10px !important;
 }
@@ -169,10 +169,12 @@ body .footer .flex-row-wrap{
 }
 
 .icon-up{
-  padding: 10px;
+  padding: 15px;
   position: absolute;
   right: 20px;
+  border: .1px solid var(--theme);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   color: var(--theme);
   bottom: 10px;
   cursor: -webkit-grab;
@@ -181,8 +183,10 @@ body .footer .flex-row-wrap{
 }
 
 .icon-up:hover,.icon-up:active{
-transform: scale(1.2);
+background: var(--theme);
+color: #000000;
 }
+
 
 .fld{
  width: 90%;
@@ -421,6 +425,7 @@ to{opacity: .9;
 .footer-social{
   width: 50px;
   height: 50px;
+  border-radius: 7px;
 }
 
 .footer-social:hover,.footer-social:active{
@@ -469,30 +474,6 @@ i{
     -ms-transform: scale(3);
     transform: scale(3);
   }
-  
-#bibleInputNo{
-  width: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-items: center;
-  height: 50px;
-  padding-left: 20px;
-  font-family: var(--roboto);
-  font-weight: normal;
-  background: #ccc;
-  text-transform: capitalize;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #000;
-}
-
-#bibleInputNo::placeholder,#fromCurrency::placeholder,#toCurrency::placeholder{
-  color: var(--smoke);
-  font-weight: normal;
-  letter-spacing: .1rem;
-}
 
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -589,12 +570,13 @@ button:hover,button:active {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   /* background: var(--lime); */
-  font-size: 1rem;
+  font-size: .9rem;
   color: #fefefe;
   border-radius: 5px;
   font-family: var(--robo);
   background: #81b316;
-  color: #000;
+  background: var(--background);
+  border: .1px solid #000813 !important;
 }
 
 #bibleContent :is(p:hover,p:active){
@@ -613,16 +595,6 @@ button:hover,button:active {
   display: flex;
   align-items: center;
  justify-content: center;
-}
-
-#bibleInputNo{
-  font-weight: normal;
-  color: #000;
-  width: 100%;
-  background: none !important;
-  height: 100%;
-  text-align: center;
-  font-family: var(--raji) !important;
 }
 
 #biblePage .fld,#wordInput{
@@ -647,7 +619,7 @@ button:hover,button:active {
 .chapter{
   position: fixed;
   left: 10px;
-  width: calc(200px * 2);
+  width: calc(240px * 2);
   display: flex;
     justify-content: center;
     align-items: center;
@@ -678,11 +650,11 @@ button:hover,button:active {
     display: grid;
     border-radius: 7px;
     height: 40px;
-    color: #000;
+    color: #fefefe;
     font-family: var(--robo);
     text-transform: capitalize;
     background: rgb(52,61,70);
-    background: #ccc;
+    background: rgb(52,61,70);
     cursor: grab;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(16px) saturate(180%);
@@ -708,7 +680,7 @@ button:hover,button:active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   display: grid;
   place-items: center;
 }
@@ -718,10 +690,14 @@ p{
   font-size: .9rem;
 }
 
+#logo img{
+  display: none;
+}
+
 #select{
   cursor: grab;
   background: var(--lime);
-  width: 90px;
+  width: 250px;
   height: 40px;
   border-radius: 30px;
   font-family: var(--robo);
@@ -750,17 +726,23 @@ filter: grayscale(20%);
 }
 
 #pagination{
-  position: relative;
-  width: 100%;
+  position: fixed;
+  bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 10px;
+  border: .1px solid #000813 !important;
+  padding: 10px;
+  background: rgb(52,61,70);
+  min-width: 20px;
+  border-radius: 10px;
+
 }
 
 #pagination p{
-  color: #000;
+  color: #fff;
 
 }
 
@@ -774,26 +756,55 @@ filter: grayscale(20%);
   background: var(--tomato);
 }
 
-#bibleInput{
+#bibleInput,#bibleInputNo{
 background: transparent !important;
 width: 100%;
 border-radius: 7px !important;
 text-transform: capitalize !important;
 font-family: var(--robo) !important;
 font-size: .9rem;
+color: #fefefe !important;
 }
 
-#pagination fieldset:first-child{
+#query fieldset:first-child{
   width: 300px;
-  background: #ccc;
-  border: .1px solid #ddd;
+  background: rgb(52,61,70);
+  border: .1px solid #000813;
+  border-radius: 7px;
+  cursor: grab;
+}
 
+.fullscreen{
+  display: block;
+padding: 5px;
+cursor: grab;
+}
+
+.fullscreen:hover,.fullscreen:active{
+color: var(--tomato);
+}
+
+#query fieldset:last-child{
+  width: 110px;
+  height: 60px;
+  background: rgb(52,61,70);
+  border: .1px solid #000813 !important;
   border-radius: 7px;
 }
 
-#pagination legend{
+#query legend{
   margin-left: 5%;
   font-family: var(--robo);
+  color: var(--lime);
+}
+
+#query{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 
