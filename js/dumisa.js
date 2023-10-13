@@ -85,7 +85,7 @@ let back = $("#back");
 let bibleInputNo = $("#bibleInputNo").value;
 
 bibleInputNo <=1 ? none(back) : grid(back);
-bibleInputNo <  allBookChapters.textContent ? grid(next) : none(next);
+bibleInputNo <  Number(allBookChapters.textContent) ? grid(next) : none(next);
 
 
   
