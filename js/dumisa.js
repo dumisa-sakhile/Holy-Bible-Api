@@ -865,10 +865,21 @@ let back = $("#back");
 
 next.addEventListener("click",()=>{
   $("#bibleInputNo").value = Number($("#bibleInputNo").value) + 1;
+
+  $$(".footer").forEach(foot=>{
+    none(foot);
+  });
+  none($("#pagination"));
   bibleApi();
+
 });
 
 back.addEventListener("click",()=>{
   $("#bibleInputNo").value = Number($("#bibleInputNo").value) - 1;
+  
+  $$(".footer").forEach(foot=>{
+    none(foot);
+  });
+  none($("#pagination"));
   bibleApi();
 });
