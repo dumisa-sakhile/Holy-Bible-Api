@@ -2,16 +2,14 @@
 
 @import 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap';
 
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap';
+
 * {
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+   user-select: none;
+   box-sizing: border-box;
     border: none;
 }
 
@@ -21,6 +19,7 @@
   --roboto: 'Roboto Condensed', sans-serif;
   --sans: 'Roboto Condensed', sans-serif;
   ;
+  --robo:'Roboto Condensed', sans-serif;
   --raji: 'Rajdhani', sans-serif;
   --blackColor: #000;
   --black: #000;
@@ -42,16 +41,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+     align-items: center;
+   justify-content: center;
+    flex-direction: column;
     gap: 30px;
 }
 
@@ -60,64 +52,39 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    align-items: center;
+   justify-content: center;
+   flex-direction: row;
 }
 
 .flex-row-wrap{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-items: start;
+  justify-content: center;
+ flex-direction: row;
+  align-self: flex-start;
   padding-left: -10px;
   gap: 30px;
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+ flex-wrap: wrap;
 }
 
 .flex-column-wrap{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 30px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   padding-left: 10px;
 }
 
 .flex-wrap{
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 body {
@@ -180,19 +147,18 @@ h1{
   flex-direction: column;
   background: inherit;
   align-self: flex-start;
-  padding-top: 110px;
 }
 
 body .footer{
   padding: 20px;
   width: 100%;
   max-height: 900px;
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   background-color: transparent;
   border-radius: 8px 8px 0 0;
   gap: 10px !important;
@@ -206,9 +172,7 @@ body .footer .flex-row-wrap{
   padding: 10px;
   position: absolute;
   right: 20px;
-  
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   color: var(--theme);
   bottom: 10px;
   cursor: -webkit-grab;
@@ -226,7 +190,6 @@ transform: scale(1.2);
  background: #BFCCE6;
  border-radius: 4px;
  backdrop-filter: blur(5px);
- -webkit-backdrop-filter: blur(5px);
 }
 
 .input{
@@ -288,8 +251,6 @@ label{
 .whole{
   width: 100%;
 }
-
-
 
 .skeleton-mom{
   width: 340px;
@@ -434,26 +395,15 @@ to{opacity: .9;
   padding-top: 30px;
   background: var(--background);
   padding-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 30px;
   overflow: hidden;
   /* From https://css.glass */
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
  backdrop-filter: blur(16px) saturate(180%);
- -webkit-backdrop-filter: blur(16px) saturate(180%);
  border-radius: 12px;
  min-height: 50px;
  border: var(--border);
@@ -622,31 +572,19 @@ button:hover,button:active {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   width: 100%;
 }
 
 #bibleContent p{
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  -ms-flex-item-align: start;
-  -ms-grid-row-align: start;
   align-self: start;
   padding: 20px;
   backdrop-filter: blur(16px) saturate(180%);
@@ -672,12 +610,8 @@ button:hover,button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+ justify-content: center;
 }
 
 #bibleInput{
@@ -718,45 +652,117 @@ button:hover,button:active {
   width: 100%;
   place-items: center;
   gap: 10px;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
-
-#chapters{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
+.chapter{
+  position: fixed;
+  left: 0;
+  width: calc(200px * 2);
+  display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    flex-direction: column;
+    min-height: 10%;
+    max-height: 100%;
+    border: .1px solid #222;
+    padding: 10px;
+    background: #000;
+    gap: 20px;
+}
+
+#chapters{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
     flex-wrap: wrap;
-    padding: 50px;
+    border-radius: 4px;
 }
 
 #chapters span{
     align-self: flex-start;
-    display: grid;
-    place-items: center;
     min-width: 70px;
-    max-width: 120px;
-    border-radius: 4px;
-    height: 50px;
-    color: #fefefe;
-    font-family: var(--raji);
-    text-transform: capitalize;
-    background: var(--lime);
+    place-items: center;
     padding: 10px;
+    display: grid;
+    border-radius: 7px;
+    height: 40px;
+    color: #000;
+    font-family: var(--robo);
+    text-transform: capitalize;
+    background: rgb(52,61,70);
+    background: #ccc;
+    cursor: grab;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16px) saturate(180%);
+}
+
+#chapters .span-active{
+  background: var(--lime) !important;
+  font-weight: bolder;
+  color: #000 !important;
 }
 
 #chapters :is(span:hover,span:active){
-    background: var(--tomato);
+  color: #000 !important;
+  font-weight: bolder;
+  background: var(--tomato);
+    
 }
+
+#books{
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+}
+
+p{
+  font-family: var(--robo);
+  font-size: .9rem;
+}
+
+#select{
+  cursor: grab;
+  background: var(--lime);
+  width: 90px;
+  height: 40px;
+  border-radius: 30px;
+  font-family: var(--robo);
+  display: grid;
+  place-items: center;
+  text-transform: capitalize;
+}
+
+#select:hover,#select:active{
+  background: var(--tomato);
+  transform: scale(1.2);
+  font-weight: bolder;
+}
+
+#cancelChapters{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: var(--tomato);
+  cursor: grab;
+}
+
+#cancelChapters:hover,#cancelChapters:active{
+transform: scale(1.2);
+filter: grayscale(20%);
+}
+
+
+
+
 
 /* special classes start  */
 .full {

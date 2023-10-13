@@ -103,13 +103,12 @@ $$(`input`).forEach(e=>{
 },)
 // time functions end
 
-
 // share api
 
 const shareData = {
 title: "Bible",
 text: "Holy Bible: World English Bible",
-url: "https://dumisa-info.netlify.app",
+url: "https://the-holy-bible.netlify.app",
 };
 
 const shareBtn= $$(".share-btn");
@@ -123,14 +122,10 @@ try {
 
 await navigator.share(shareData);
 
-//universalOn(3000,'successful','Dumisa shared successfully!');
-
 window.navigator.vibrate(200);
     
 } catch (err) {
-    
-console.log(`an error occurred: ${err}`);
-    
+  universalOn(10000,'Could not share',`Error : ${err}, occurred.`);
 }
 });
 
@@ -154,7 +149,8 @@ document.onkeydown = (e) => {
     return false;
 };
 
-
+let associatesValue  = 20;
+const skeletonTemplate = `<aside class="skeleton-mom flex-row"><aside class="skeleton-child skeleton-child-1 flex-column gap"><h6></h6><main></main></aside><aside class="skeleton-child skeleton-child-2 flex-row gap"><div></div><div></div></aside></aside>`;
 
 //bibleApi
 
@@ -771,8 +767,41 @@ function booksFetch(){
 
 fetch(`booksOfTheBible.json`)
 .then(res=>res.json())
-.then(booksData=>console.log(booksData))
+.then(booksData=>{
 
+  console.log(booksData);
+
+  booksData.map(book=>{
+    let chapters = $("#chapters");
+    let span = createEl('span');
+    span.textContent = book.name;
+    span.setAttribute('data-book',book.name);
+    span.setAttribute('data-number',book.chapters);
+    chapters.append(span);
+
+    function removeSpnActive(){
+      $$("#chapters span").forEach(spn=>{
+      spn.classList.remove("span-active");
+      })
+    }
+
+    $$("#chapters span").forEach(spn=>{
+      spn.addEventListener('click',(ev)=>{
+      $("#bibleInput").value = ev.currentTarget.dataset.book;
+      removeSpnActive();
+      ev.currentTarget.classList.add("span-active");
+      })
+    })
+
+
+  });
+
+})
 }
 
-booksFetch()
+booksFetch();
+
+$("#select").addEventListener("click",bibleApi);
+$("#cancelChapters").addEventListener("click",()=>{
+  none($("#books"));
+});
