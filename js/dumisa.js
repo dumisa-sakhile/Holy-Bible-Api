@@ -169,6 +169,7 @@ const bibleBtn = $('#bibleBtn');
 let verseArray;
 
 function bibleApi(){
+$("body").classList.remove('overflow');
 
 let bibleContent = $('#bibleContent');
 
@@ -820,6 +821,7 @@ booksFetch();
 
 $("#select").addEventListener("click",()=>{
   none($("#books"));
+  $("#bibleInputNo").value = 1;
   bibleApi();
   $$(".footer").forEach(foot=>{
     none(foot);
@@ -828,6 +830,7 @@ $("#select").addEventListener("click",()=>{
 
 $("#cancelChapters").addEventListener("click",()=>{
   none($("#books"));
+  $("body").classList.remove('overflow');
 });
 
 
@@ -836,6 +839,7 @@ none($("#books"));
 
 $("#bibleInput").addEventListener("click",()=>{
   flex($("#books"));
+  $("body").classList.add('overflow');
 });
 
 

@@ -162,6 +162,7 @@ body .footer{
   background: var(--background);
   border-radius: 8px 8px 0 0;
   gap: 10px !important;
+  padding-bottom: 100px;
 }
 
 body .footer .flex-row-wrap{
@@ -574,6 +575,7 @@ button:hover,button:active {
 #bibleContent{
   width: 90%;
   text-align: center;
+  position: relative;
 }
 
 #biblePage #bibleContent{
@@ -585,7 +587,7 @@ button:hover,button:active {
   justify-content: center;
   align-items: center;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: row;
   width: 100%;
@@ -646,9 +648,7 @@ button:hover,button:active {
 }
 
 .chapter{
-  position: fixed;
-  left: 10px;
-  width: calc(240px * 2);
+  width: 100%;
   display: flex;
     justify-content: center;
     align-items: center;
@@ -768,6 +768,7 @@ filter: grayscale(20%);
   background: rgb(52,61,70);
   min-width: 20px;
   border-radius: 10px;
+  z-index: 3;
 
 }
 
