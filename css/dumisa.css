@@ -657,7 +657,7 @@ button:hover,button:active {
     max-height: 100%;
     border: .1px solid #222;
     padding: 10px;
-    background: var(--background);
+    background: rgb(52,61,70);
     border-radius: 8px;
     gap: 20px;
 
