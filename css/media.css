@@ -145,7 +145,7 @@ color: var(--tomato);
   .chapter{
     position: fixed;
     left: 10px;
-    width: calc(240px * 2);
+    width: calc(220px * 2);
   }
 
   #biblePage #book{

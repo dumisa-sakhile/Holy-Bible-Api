@@ -840,6 +840,7 @@ none($("#books"));
 $("#bibleInput").addEventListener("click",()=>{
   flex($("#books"));
   $("body").classList.add('overflow');
+  $("#bibleInput").blur();
 });
 
 

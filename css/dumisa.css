@@ -177,7 +177,7 @@ body .footer .flex-row-wrap{
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   color: var(--theme);
-  bottom: 10px;
+  bottom: 100px;
   cursor: -webkit-grab;
   cursor: grab;
   border-radius: 50%;
@@ -727,11 +727,11 @@ p{
   display: none;
 }
 
-#select{
+#select,#cancelChapters{
   cursor: grab;
   background: var(--lime);
-  width: 250px;
-  height: 40px;
+  width: 150px;
+  height: 45px !important;
   border-radius: 30px;
   font-family: var(--robo);
   display: grid;
@@ -739,23 +739,23 @@ p{
   text-transform: capitalize;
 }
 
-#select:hover,#select:active{
+#cancelChapters{
   background: var(--tomato);
-  transform: scale(1.2);
+}
+
+#select:hover,#select:active{
+  border: .1px solid var(--lime);
+  color: var(--lime);
+  background: transparent;
   font-weight: bolder;
 }
 
-#cancelChapters{
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  color: var(--tomato);
-  cursor: grab;
-}
 
 #cancelChapters:hover,#cancelChapters:active{
-transform: scale(1.2);
-filter: grayscale(20%);
+  border: .1px solid var(--tomato);
+  color: var(--tomato);
+  background: transparent;
+  font-weight: bolder;
 }
 
 #pagination{
