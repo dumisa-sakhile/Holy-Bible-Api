@@ -660,6 +660,7 @@ button:hover,button:active {
     background: var(--background);
     border-radius: 8px;
     gap: 20px;
+
 }
 
 #chapters{
@@ -668,7 +669,8 @@ button:hover,button:active {
     align-items: center;
     flex-direction: row;
     gap: 5px;
-    flex-wrap: wrap;
+  overflow-y: auto;
+  flex-wrap: wrap;
 }
 
 #chapters span{
@@ -713,6 +715,7 @@ button:hover,button:active {
   background: rgba(0, 0, 0, 0.7);
   display: grid;
   place-items: center;
+  padding: 20px 0;
 }
 
 p{
