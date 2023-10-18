@@ -191,22 +191,20 @@ color: #000000;
 
 .fld{
  width: 90%;
- height: 60px;
+ height: 80px !important;
  background: #BFCCE6;
- border-radius: 30px !important;
  backdrop-filter: blur(5px);
 }
 
 .input{
   margin-top: -10px;
   width: 90%;
-  height: 40px;
+  height: 60px;
   padding-left: 10px;
   margin-top: 0px;
   outline: none;
   border: none !important;
   outline: none !important;
-  border-radius: 30px !important;
   background: none !important;
   color: #000 !important;
 }
@@ -260,7 +258,6 @@ label{
 .skeleton-mom{
   width: 340px;
   height: 130px;
-  border-radius: 4px;
   padding: 0;
   margin: 0;
   border-radius: 16px;
@@ -509,7 +506,6 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   height: 1em;
   width: 1em;
-  border-radius: 50em;
   background: url(/images/delete.svg) no-repeat 50% 50%;
   background-size: contain;
   opacity: 0;
@@ -630,8 +626,7 @@ button:hover,button:active {
 
 #biblePage .fld,#wordInput{
   width: 100%;
-  height: 65px; 
-  border-radius: 10px;
+  height: 80px; 
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -656,7 +651,7 @@ button:hover,button:active {
     min-height: 10%;
     max-height: 100%;
     border: .1px solid #222;
-    padding: 10px;
+    padding: 20px 10px;
     background: rgb(52,61,70);
     border-radius: 8px;
     gap: 20px;
@@ -690,6 +685,7 @@ button:hover,button:active {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(16px) saturate(180%);
     font-size: .9rem;
+    border: .1px solid #222;
 }
 
 #chapters .span-active{
@@ -793,7 +789,6 @@ p{
 #bibleInput,#bibleInputNo{
 background: transparent !important;
 width: 100%;
-border-radius: 7px !important;
 text-transform: capitalize !important;
 font-family: var(--robo) !important;
 font-size: .9rem;
@@ -804,7 +799,7 @@ color: #fefefe !important;
   width: 300px;
   background: rgb(52,61,70);
   border: .1px solid #000813;
-  border-radius: 7px;
+  border-radius: 10px;
   cursor: grab;
 }
 
@@ -820,10 +815,10 @@ color: var(--tomato);
 
 #query fieldset:last-child{
   width: 110px;
-  height: 60px;
+  height: 80px;
   background: rgb(52,61,70);
   border: .1px solid #000813 !important;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 
 #query legend{
@@ -831,6 +826,7 @@ color: var(--tomato);
   font-family: var(--robo);
   color: var(--lime);
 }
+
 
 #query{
   position: relative;
@@ -840,17 +836,6 @@ color: var(--tomato);
   align-items: center;
   gap: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
