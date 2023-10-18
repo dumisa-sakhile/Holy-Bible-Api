@@ -1,15 +1,23 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap';
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
-@import 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap';
 
-@import 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap';
 
 * {
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-   user-select: none;
-   box-sizing: border-box;
+   -webkit-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
     border: none;
 }
 
@@ -20,7 +28,7 @@
   --sans: 'Roboto Condensed', sans-serif;
   ;
   --robo:'Roboto Condensed', sans-serif;
-  --raji: 'Rajdhani', sans-serif;
+  --raji: 'Roboto Condensed', sans-serif;
   --blackColor: #000;
   --black: #000;
   --dark: #333;
@@ -41,9 +49,16 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-     align-items: center;
-   justify-content: center;
-    flex-direction: column;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 30px;
 }
 
@@ -52,39 +67,64 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
-   justify-content: center;
-   flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
 }
 
 .flex-row-wrap{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: start;
-  justify-content: center;
- flex-direction: row;
-  align-self: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+ -webkit-box-orient: horizontal;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: row;
+         flex-direction: row;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   padding-left: -10px;
   gap: 30px;
   width: 100%;
- flex-wrap: wrap;
+ -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
 }
 
 .flex-column-wrap{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 30px;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   padding-left: 10px;
 }
 
 .flex-wrap{
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body {
@@ -92,9 +132,16 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .condensed {
@@ -140,25 +187,46 @@ h1{
   min-height: 100%;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 30px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: inherit;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 body .footer{
   padding: 20px;
   width: 100%;
   max-height: 900px;
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   background: var(--background);
   border-radius: 8px 8px 0 0;
   gap: 10px !important;
@@ -193,7 +261,8 @@ color: #000000;
  width: 90%;
  height: 80px !important;
  background: #BFCCE6;
- backdrop-filter: blur(5px);
+ -webkit-backdrop-filter: blur(5px);
+         backdrop-filter: blur(5px);
 }
 
 .input{
@@ -207,6 +276,22 @@ color: #000000;
   outline: none !important;
   background: none !important;
   color: #000 !important;
+}
+
+.fld .input::-webkit-input-placeholder{
+  color: #343f46 !important;
+}
+
+.fld .input::-moz-placeholder{
+  color: #343f46 !important;
+}
+
+.fld .input:-ms-input-placeholder{
+  color: #343f46 !important;
+}
+
+.fld .input::-ms-input-placeholder{
+  color: #343f46 !important;
 }
 
 .fld .input::placeholder{
@@ -233,6 +318,7 @@ label{
 .btn,button,#button{
   width: 90%;
   height: 45px;
+  background-image: -o-radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
   background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
   color: #111;
   font-weight: bolder;
@@ -247,6 +333,7 @@ label{
   place-items: center;
   border-radius: 5px;
   height: 55px;
+  cursor: -webkit-grab;
   cursor: grab;
   letter-spacing: .1rem;
 }
@@ -376,6 +463,7 @@ to{opacity: .9;
 
 #universalOkay{
   font-family: var(--sans) !important;
+  background-image: -o-radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
   background-image: radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
   font-weight: bold;
   color: var(--smoke);
@@ -390,22 +478,34 @@ to{opacity: .9;
 }
 
 #universalOkay:hover,#universalOkay:active{
-  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
 }
 
 .article,article,#form{
   padding-top: 30px;
   background: var(--background);
   padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
   overflow: hidden;
   /* From https://css.glass */
- box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
- backdrop-filter: blur(16px) saturate(180%);
+ -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ -webkit-backdrop-filter: blur(16px) saturate(180%);
+         backdrop-filter: blur(16px) saturate(180%);
  border-radius: 12px;
  min-height: 50px;
  border: var(--border);
@@ -456,44 +556,55 @@ to{opacity: .9;
 }
 
 .footer-social:hover,.footer-social:active{
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .social-gmail{
+  background-image: -o-radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
   background-image: radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
 }
 
 .social-github{
+  background: -o-radial-gradient(circle, #000813, #060708);
   background: radial-gradient(circle, #000813, #060708);
 }
 
 .social-stack{
+  background: -o-radial-gradient(circle, #F48024, #C54E19);
   background: radial-gradient(circle, #F48024, #C54E19);
 }
 
 .social-whatsapp{
+  background: -o-radial-gradient(circle, #28D146, #1EAB36);
   background: radial-gradient(circle, #28D146, #1EAB36);
 }
 
 .social-linkedin{
+  background: -o-radial-gradient(circle, #1877F2, #0D5DA9);
   background: radial-gradient(circle, #1877F2, #0D5DA9);
 }
 
 .social-telegram{
+  background: -o-radial-gradient(circle, #0178a7, #0087B9);
   background: radial-gradient(circle, #0178a7, #0087B9);
 }
 
 .social-instagram{
+  background: -o-radial-gradient(circle, #EE2A7B, #ac3f6d);
   background: radial-gradient(circle, #EE2A7B, #ac3f6d);
 }
 
 .social-share{
+  background: -o-radial-gradient(circle, #0066FF, #0052CC);
   background: radial-gradient(circle, #0066FF, #0052CC);
 }
 
 .child-social:hover,.child-social:active{
   border :none;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
  
 i{
@@ -512,7 +623,8 @@ input[type="search"]::-webkit-search-cancel-button {
   pointer-events: none;
   position:relative;
   right:20px;  
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);  
+          transform: scale(1.5);
 }
 
 input[type="search"]:focus::-webkit-search-cancel-button {
@@ -563,8 +675,10 @@ button:hover,button:active {
 }
 
 #bibleSuggestions :is(li:hover,li:active){
+  background-image: -o-radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
   background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
   font-family: var(--sans);
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
@@ -579,20 +693,34 @@ button:hover,button:active {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   justify-content: center;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
 }
 
 #bibleContent p{
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  align-self: start;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   padding: 20px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -620,8 +748,12 @@ button:hover,button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: center;
- justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+ -webkit-box-pack: center;
+     -ms-flex-pack: center;
+         justify-content: center;
 }
 
 #biblePage .fld,#wordInput{
@@ -639,15 +771,25 @@ button:hover,button:active {
   width: 100%;
   place-items: center;
   gap: 10px;
+  -ms-grid-columns: 1fr 10px 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
 .chapter{
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 10%;
     max-height: 100%;
     border: .1px solid #222;
@@ -659,13 +801,23 @@ button:hover,button:active {
 }
 
 #chapters{
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 5px;
   overflow-y: auto;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #chapters span{
@@ -673,6 +825,7 @@ button:hover,button:active {
     min-width: 70px;
     place-items: center;
     padding: 10px;
+    display: -ms-grid;
     display: grid;
     border-radius: 7px;
     height: 40px;
@@ -681,9 +834,12 @@ button:hover,button:active {
     text-transform: capitalize;
     background: rgb(52,61,70);
     background: rgb(52,61,70);
+    cursor: -webkit-grab;
     cursor: grab;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+            backdrop-filter: blur(16px) saturate(180%);
     font-size: .9rem;
     border: .1px solid #222;
 }
@@ -709,6 +865,7 @@ button:hover,button:active {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
+  display: -ms-grid;
   display: grid;
   place-items: center;
   padding: 20px 0;
@@ -724,12 +881,14 @@ p{
 }
 
 #select,#cancelChapters{
+  cursor: -webkit-grab;
   cursor: grab;
   background: var(--lime);
   width: 150px;
   height: 45px !important;
   border-radius: 30px;
   font-family: var(--robo);
+  display: -ms-grid;
   display: grid;
   place-items: center;
   text-transform: capitalize;
@@ -757,10 +916,19 @@ p{
 #pagination{
   position: fixed;
   bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 10px;
   border: .1px solid #000813 !important;
   padding: 10px;
@@ -795,17 +963,23 @@ font-size: .9rem;
 color: #fefefe !important;
 }
 
+#bibleInputNo:invalid{
+  color: var(--tomato) !important;
+}
+
 #query fieldset:first-child{
   width: 300px;
   background: rgb(52,61,70);
   border: .1px solid #000813;
   border-radius: 10px;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 
 .fullscreen{
   display: block;
 padding: 5px;
+cursor: -webkit-grab;
 cursor: grab;
 }
 
@@ -831,9 +1005,15 @@ color: var(--tomato);
 #query{
   position: relative;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
 }
 
@@ -1047,6 +1227,7 @@ color: var(--tomato);
 }
 
 .bgImg{
+  background-image: -o-radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
   background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
   border-radius: 5%;
 }

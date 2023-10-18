@@ -184,32 +184,32 @@ let bookChapters = $("#bookChapters");
 
 if(bibleInput.toLowerCase() === '2 john'){
 
-  url = `https://bible-api.com/2john+1:1-13`;
+  url = `https://bible-api.com/2john+1:1-13?translation=kjv`;
 
 }
 else if(bibleInput.toLowerCase() === '3 john'){
 
-  url = `https://bible-api.com/3john+1:1-14`;
+  url = `https://bible-api.com/3john+1:1-14?translation=kjv`;
 
 }
 else if(bibleInput.toLowerCase() === 'obadiah'){
 
-  url = `https://bible-api.com/obadiah+1:1-21`;
+  url = `https://bible-api.com/obadiah+1:1-21?translation=kjv`;
 
 }
 else if(bibleInput.toLowerCase() === 'jude'){
 
-  url = `https://bible-api.com/jude+1:1-25`;
+  url = `https://bible-api.com/jude+1:1-25?translation=kjv`;
 
 }
 else if(bibleInput.toLowerCase() === 'philemon'){
 
-  url = `https://bible-api.com/philemon+1:1-25`;
+  url = `https://bible-api.com/philemon+1:1-25?translation=kjv`;
 
 }
 else{
 
-  url = `https://bible-api.com/${bibleInput}+${bibleInputNo}`;
+  url = `https://bible-api.com/${bibleInput}+${bibleInputNo}?translation=kjv`;
 }
 
 
@@ -714,7 +714,7 @@ $$(".footer").forEach(foot=>{
 
 }).catch((err)=>{
 
-  universalOn(4000,'Oh No!', 'Book could not be found. Please type the correct book in its field and value as well');
+  universalOn(10000,'Oh No!', 'Book could not be found. Please type the correct book in its field and value as well');
   
   for (let i = 0; i < associatesValue; i++) {
   
@@ -747,7 +747,7 @@ if (Number($('#bibleInputNo').value) > Number($('#bookChapters').textContent)) {
 
   $('#bibleInputNo').value = 1;
 
-  universalOn(7000, 'Chapters number exceeded', `please note that this chapter has only ${$('#bookChapters').textContent}, please do not exceed this range!`);
+  universalOn(10000, 'Chapters number exceeded', `please note that this chapter has only ${$('#bookChapters').textContent}, please do not exceed this range!`);
   none($("#pagination"));
   bibleApi();
 

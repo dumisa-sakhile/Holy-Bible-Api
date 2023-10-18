@@ -1,206 +1,220 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 .material-icons, i{
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none
-  }
-  
-  ::-webkit-file-upload-button{
-    font-weight: bolder;
-    color: var(--theme);
-    height: 40px;
-    width: 70px;
-    border-radius: 0px;
-    border: none;
-    background: var(--smoke);
-  }
-  
-  :focus {
-      outline: none;
-  }
-  
-  html:focus-within {
-      scroll-behavior: smooth;
-  }
-  
-  ::-webkit-scrollbar {
-    border-radius: 30px;
-    width: 9px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: var(--background);
-    border-radius: 30px;
-  
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
-    border-radius: 30px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  
-  ::-webkit-scrollbar-button {
-    display: none;
-  }
-  
-  /*:is(body,.watchTop)*/
-  
-  ::-webkit-input-placeholder {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none
+}
+
+::-webkit-file-upload-button{
+  font-weight: bolder;
+  color: var(--theme);
+  height: 40px;
+  width: 70px;
+  border-radius: 0px;
+  border: none;
+  background: var(--smoke);
+}
+
+:focus {
+    outline: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  border-radius: 30px;
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 30px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/*:is(body,.watchTop)*/
+
+::-webkit-input-placeholder {
+  color: #343f46 !important;
+  text-transform: none;
+  font-family: var(--raji);
+}
+
+::-moz-placeholder {
+  color: #343f46 !important;
+  text-transform: none;
+  font-family: var(--raji);
+}
+
+:-ms-input-placeholder {
+  color: #343f46 !important;
+  text-transform: none;
+  font-family: var(--raji);
+}
+
+::-ms-input-placeholder {
+  color: #343f46 !important;
+  text-transform: none;
+  font-family: var(--raji);
+}
+
+::placeholder {
     color: #343f46 !important;
     text-transform: none;
     font-family: var(--raji);
-  }
-  
-  ::-moz-placeholder {
-    color: #343f46 !important;
-    text-transform: none;
-    font-family: var(--raji);
-  }
-  
-  :-ms-input-placeholder {
-    color: #343f46 !important;
-    text-transform: none;
-    font-family: var(--raji);
-  }
-  
-  ::-ms-input-placeholder {
-    color: #343f46 !important;
-    text-transform: none;
-    font-family: var(--raji);
-  }
-  
-  ::placeholder {
-      color: #343f46 !important;
-      text-transform: none;
-      font-family: var(--raji);
-  }
-  
+}
+
 @media (min-width: 360px) {
- 
-    :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-        width: 98% !important;
-      }
-    
-  
-    body{
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-    
-    ::-webkit-meter-bar{
-        border-radius: 2px;
-      }
-      
+
+  :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
+      width: 98% !important;
     }
   
+
+  body{
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+    }
+  
+  ::-webkit-meter-bar{
+      border-radius: 2px;
+    }
+    
+  }
+
 @media (min-width: 500px) {
 
 :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-        min-width: 400px !important;
-        max-width: 500px !important;
+      min-width: 400px !important;
+      max-width: 500px !important;
 }
-    
+  
 ::-webkit-meter-bar{
-        border-radius: 30px;
+      border-radius: 30px;
 }
- 
+
 }
-    
+  
 @media (min-width: 500px){
-    :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-      width: 100% !important;
-    }
+  :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
+    width: 100% !important;
+  }
 }
- 
+
 
 @media(min-width: 800px){
 
-  .fullscreen{
-    display: block;
+.fullscreen{
+  display: block;
 padding: 5px;
+cursor: -webkit-grab;
 cursor: grab;
-  }
+}
 
-  .fullscreen:hover,.fullscreen:active{
+.fullscreen:hover,.fullscreen:active{
 color: var(--tomato);
 
-  }
+}
 
-  #logo img{
-    display: block;
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 30px;
-    left: 50px;
-    z-index: 3;
-    cursor: grab;
-  }
+#logo img{
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 30px;
+  left: 50px;
+  z-index: 3;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
 
-  .chapter{
-    position: fixed;
-    left: 10px;
-    width: calc(220px * 2);
-  }
+.chapter{
+  position: fixed;
+  left: 10px;
+  width: calc(220px * 2);
+}
 
-  #biblePage #book{
-    position: fixed;
-  z-index: 4;
-  top: 0;
-  left: 0;
-  }
+#biblePage #book{
+  position: fixed;
+z-index: 4;
+top: 0;
+left: 0;
+}
 
 }
 @media (min-width: 859px){
-  
+
 :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-        width: 350px !important;
-      }
-    
+      width: 350px !important;
+    }
+  
 }
-    
+  
 @media (min-width: 1000px){
+    :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
+      width: 450px !important;
+}
+  
+    #navigation > article{
+      width: 500px !important;
+    }
+  
+    }
+  
+@media (min-width: 1300px){
+      :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
+        width: 350px !important
+}
+}
+  
+@media (min-width: 1400px){
+        :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
+          width: 400px !important;
+}
+  
+        #navigation > article{
+          width: 500px !important;
+        }
+      
+        }
+  
+@media (min-width: 1500px){
       :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
         width: 450px !important;
 }
-    
-      #navigation > article{
-        width: 500px !important;
-      }
-    
-      }
-    
-@media (min-width: 1300px){
-        :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-          width: 350px !important
 }
-}
-    
-@media (min-width: 1400px){
-          :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-            width: 400px !important;
-}
-    
-          #navigation > article{
-            width: 500px !important;
-          }
-        
-          }
-    
-@media (min-width: 1500px){
-        :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-          width: 450px !important;
-}
-}
-    
+  
 @media (min-width: 1600px){
-        :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-          width: 500px !important;
+      :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
+        width: 500px !important;
 }
 }
-    
+  
