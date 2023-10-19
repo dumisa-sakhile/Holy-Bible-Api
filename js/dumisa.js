@@ -181,6 +181,8 @@ let bibleInputNo = $('#bibleInputNo').value;
 let url;
 let bookChapters = $("#bookChapters");
 
+console.clear();
+universalOff();
 
 if(bibleInput.toLowerCase() === '2 john'){
 
