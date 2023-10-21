@@ -276,6 +276,7 @@ color: #000000;
   outline: none !important;
   background: none !important;
   color: #000 !important;
+  caret-color: var(--theme);
 }
 
 .fld .input::-webkit-input-placeholder{
@@ -961,6 +962,7 @@ text-transform: capitalize !important;
 font-family: var(--robo) !important;
 font-size: .9rem;
 color: #fefefe !important;
+caret-color: var(--theme);
 }
 
 #bibleInputNo:invalid{
