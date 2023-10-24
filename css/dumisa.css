@@ -185,8 +185,8 @@ h1{
 #biblePage{
   width: 100%;
   min-height: 100%;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -978,16 +978,6 @@ caret-color: var(--theme);
   cursor: grab;
 }
 
-.fullscreen{
-  display: block;
-padding: 5px;
-cursor: -webkit-grab;
-cursor: grab;
-}
-
-.fullscreen:hover,.fullscreen:active{
-color: var(--tomato);
-}
 
 #query fieldset:last-child{
   width: 110px;
@@ -1019,6 +1009,24 @@ color: var(--tomato);
   gap: 20px;
 }
 
+.love{
+  color: var(--tomato);
+}
+
+#checkScreen{
+width: inherit;
+height: inherit;
+}
+
+#checkScreen{
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+  
+label:hover, label:active{
+color: var(--tomato) !important;
+cursor: grab;
+}
 
 
 

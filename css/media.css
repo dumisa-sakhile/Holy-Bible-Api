@@ -132,12 +132,7 @@ html:focus-within {
 
 @media(min-width: 800px){
 
-.fullscreen{
-  display: block;
-padding: 5px;
-cursor: -webkit-grab;
-cursor: grab;
-}
+
 
 .fullscreen:hover,.fullscreen:active{
 color: var(--tomato);

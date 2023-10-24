@@ -849,7 +849,7 @@ $("#bibleInput").addEventListener("click",()=>{
 let fullScreen = $$(".fullscreen");
 
 fullScreen.forEach(screen=>{
-  screen.addEventListener('click',toggleFullscreen)
+  screen.addEventListener('change',toggleFullscreen)
 })
 
 
@@ -866,6 +866,8 @@ function toggleFullscreen() {
           });
   }
 }
+
+
 
 let next = $("#next");
 let back = $("#back");
@@ -890,3 +892,8 @@ back.addEventListener("click",()=>{
   none($("#pagination"));
   bibleApi();
 });
+
+$("#logo").addEventListener('click',(ev)=>{
+  ev.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+})
