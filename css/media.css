@@ -132,23 +132,8 @@ html:focus-within {
 
 @media(min-width: 800px){
 
-
-
 .fullscreen:hover,.fullscreen:active{
 color: var(--tomato);
-
-}
-
-#logo img{
-  display: block;
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 30px;
-  left: 50px;
-  z-index: 3;
-  cursor: -webkit-grab;
-  cursor: grab;
 }
 
 .chapter{
@@ -159,9 +144,9 @@ color: var(--tomato);
 
 #biblePage #book{
   position: fixed;
-z-index: 4;
-top: 0;
-left: 0;
+  z-index: 4;
+  top: 0;
+  left: 0;
 }
 
 }
@@ -184,6 +169,22 @@ left: 0;
   
     }
   
+@media (min-width: 1071px){
+  #logo{
+    display: block;
+    position: absolute;
+    height: 70px;
+    top: 80px;
+    left: 50px;
+    z-index: 3;
+    cursor: -webkit-grab;
+    cursor: grab;
+    color: var(--theme);
+    font-family: var(--raji);
+  }
+  
+}
+
 @media (min-width: 1300px){
       :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
         width: 350px !important
