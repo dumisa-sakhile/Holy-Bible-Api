@@ -766,12 +766,8 @@ fetch(`booksOfTheBible.json`)
 
 const oldBooks = booksData.filter(book=>book.type == 'old');
   
-console.log(oldBooks);
-
-
 const newBooks = booksData.filter(book=>book.type == 'new');
   
-console.log(newBooks);
 
   booksData.map(book=>{
     let chapters = $("#chapters");

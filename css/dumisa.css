@@ -765,9 +765,8 @@ button:hover,button:active {
     border-radius: 7px;
     height: 40px;
     color: #fefefe;
-    font-family: var(--robo);
+    font-family: var(--raji) !important;
     text-transform: capitalize;
-    background: rgb(52,61,70);
     cursor: -webkit-grab;
     cursor: grab;
     -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -776,6 +775,7 @@ button:hover,button:active {
             backdrop-filter: blur(16px) saturate(180%);
     font-size: .9rem;
     border: .1px solid #222;
+    font-size: 1rem;
 }
 
 #chapters .span-active{
@@ -819,9 +819,9 @@ p{
   cursor: grab;
   background: var(--lime);
   width: 150px;
-  height: 45px !important;
-  border-radius: 30px;
-  font-family: var(--robo);
+  height: 50px !important;
+  border-radius: 7px;
+  font-family: var(--robo) !important;
   display: -ms-grid;
   display: grid;
   place-items: center;
