@@ -113,34 +113,7 @@ $$(`input`).forEach(e=>{
 },)
 // time functions end
 
-// share api
 
-const shareData = {
-title: "Bible",
-text: "Holy Bible: World English Bible",
-url: "https://the-holy-bible.netlify.app",
-};
-
-const shareBtn= $$(".share-btn");
-
-
-// Share must be triggered by "user activation"
-shareBtn.forEach(e=>{
-  e.addEventListener("click", async () => {
-  
-try {
-
-await navigator.share(shareData);
-
-window.navigator.vibrate(200);
-    
-} catch (err) {
-  universalOn(10000,'Could not share',`Error : ${err}, occurred.`);
-}
-});
-
-
-})
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 function ctrlShiftKey(e, keyCode) {

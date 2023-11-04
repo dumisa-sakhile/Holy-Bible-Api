@@ -22,23 +22,14 @@
 }
 
 :root {
-  --tomato: #FF3300;
-  --shadow: 5px 5px 10px #b3b3b3, -5px -5px 10px #ffffff;
   --roboto: 'Roboto Condensed', sans-serif;
   --sans: 'Roboto Condensed', sans-serif;
   ;
   --robo:'Roboto Condensed', sans-serif;
   --raji: 'Roboto Condensed', sans-serif;
-  --blackColor: #000;
-  --black: #000;
-  --dark: #333;
-  --white: #fff;
-  --whitesmoke: #F7F7F7;
   --smoke: #e9eef7;
   --tomato: #FF3300;
-  --theme: #0066FF;
   --lime: #43b33c;
-  --gray: #424242;
   --faded: rgba(5, 6, 8, 0.2);
   --theme: var(--lime);
   --black: var(--smoke);
@@ -256,13 +247,12 @@ background: var(--theme);
 color: #000000;
 }
 
-
 .fld{
  width: 90%;
  height: 80px !important;
  background: #BFCCE6;
  -webkit-backdrop-filter: blur(5px);
-         backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .input{
@@ -550,64 +540,6 @@ to{opacity: .9;
   cursor: grabbing;
 }
 
-.footer-social{
-  width: 50px;
-  height: 50px;
-  border-radius: 7px;
-}
-
-.footer-social:hover,.footer-social:active{
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.social-gmail{
-  background-image: -o-radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
-  background-image: radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
-}
-
-.social-github{
-  background: -o-radial-gradient(circle, #000813, #060708);
-  background: radial-gradient(circle, #000813, #060708);
-}
-
-.social-stack{
-  background: -o-radial-gradient(circle, #F48024, #C54E19);
-  background: radial-gradient(circle, #F48024, #C54E19);
-}
-
-.social-whatsapp{
-  background: -o-radial-gradient(circle, #28D146, #1EAB36);
-  background: radial-gradient(circle, #28D146, #1EAB36);
-}
-
-.social-linkedin{
-  background: -o-radial-gradient(circle, #1877F2, #0D5DA9);
-  background: radial-gradient(circle, #1877F2, #0D5DA9);
-}
-
-.social-telegram{
-  background: -o-radial-gradient(circle, #0178a7, #0087B9);
-  background: radial-gradient(circle, #0178a7, #0087B9);
-}
-
-.social-instagram{
-  background: -o-radial-gradient(circle, #EE2A7B, #ac3f6d);
-  background: radial-gradient(circle, #EE2A7B, #ac3f6d);
-}
-
-.social-share{
-  background: -o-radial-gradient(circle, #0066FF, #0052CC);
-  background: radial-gradient(circle, #0066FF, #0052CC);
-}
-
-.child-social:hover,.child-social:active{
-  border :none;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
- 
 i{
     -webkit-transform: scale(3);
     -ms-transform: scale(3);
@@ -798,6 +730,7 @@ button:hover,button:active {
     background: rgb(52,61,70);
     border-radius: 8px;
     gap: 20px;
+    
 
 }
 
@@ -819,6 +752,7 @@ button:hover,button:active {
   overflow-y: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      
 }
 
 #chapters span{
@@ -833,7 +767,6 @@ button:hover,button:active {
     color: #fefefe;
     font-family: var(--robo);
     text-transform: capitalize;
-    background: rgb(52,61,70);
     background: rgb(52,61,70);
     cursor: -webkit-grab;
     cursor: grab;
