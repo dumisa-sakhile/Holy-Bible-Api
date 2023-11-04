@@ -55,11 +55,11 @@ function copyText(theCopiedText, theTime, theUniversalTitle, theUniversalContent
   
   }
   
-$$("button").forEach(e => {
-  e.addEventListener("click", (ev) => {
-      ev.currentTarget.classList.toggle("scaled");
-    });
-  });
+// $$("button").forEach(e => {
+//   e.addEventListener("click", (ev) => {
+//       ev.currentTarget.classList.toggle("scaled");
+//     });
+//   });
   
 
 $$('.icon-up').forEach(e=>{
@@ -824,27 +824,26 @@ $("#bibleInput").addEventListener("click",()=>{
 });
 
 
-let fullScreen = $$(".fullscreen");
+let fullScreen = $(".fullscreen");
 
-fullScreen.forEach(screen=>{
-  screen.addEventListener('change',toggleFullscreen)
-})
+fullScreen.addEventListener('click',toggleFullscreen);
 
+fullScreen.textContent = 'Enter Fullscreen Mode';      
 
 function toggleFullscreen() {
   if (document.fullscreenElement) {
       // If there's an element in fullscreen, exit fullscreen
       document.exitFullscreen();
+this.textContent = 'Enter Fullscreen Mode';      
   
   } else {
       // If not in fullscreen, request fullscreen on the document
-      document.documentElement.requestFullscreen()
-          .catch(err => {
+this.textContent = 'Exit Fullscreen Mode';      
+document.documentElement.requestFullscreen().catch(err => {
               console.error('Failed to enter fullscreen:', err);
           });
   }
 }
-
 
 
 let next = $("#next");

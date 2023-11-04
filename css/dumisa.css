@@ -314,7 +314,7 @@ label{
   color: #111;
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: .9rem;
   font-family: var(--roboto);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -565,9 +565,16 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   pointer-events: all;
 }
 
-button:hover,button:active {
-  -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
+#back:hover,#back:active {
+  border: .1px solid var(--tomato);
+  color: var(--tomato) !important;
+  background: none;
+}
+
+#next:hover,#next:active {
+  border: .1px solid var(--lime);
+  color: var(--lime) !important;
+  background: none;
 }
 
 .list{
