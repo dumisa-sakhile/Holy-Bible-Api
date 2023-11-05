@@ -113,6 +113,8 @@ $$(`input`).forEach(e=>{
 },)
 // time functions end
 
+//copyright years
+$("#copyrightYears").textContent = new Date().getFullYear();
 
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
@@ -716,6 +718,9 @@ setTimeout(() => {
 $('#bibleContent').innerHTML = '';
   
 setTimeout(bibleApi);
+setTimeout(()=>{
+  flex($(".footer"));
+},1000);
 
 }, 1000);
 
