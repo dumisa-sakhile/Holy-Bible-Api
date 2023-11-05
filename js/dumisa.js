@@ -708,7 +708,16 @@ $$(".footer").forEach(foot=>{
 
 }
 
-bibleApi();
+
+
+//1 sec delay for opening skeleton loading
+setTimeout(() => {
+  
+$('#bibleContent').innerHTML = '';
+  
+setTimeout(bibleApi);
+
+}, 1000);
 
 
 $('#bibleInputNo').addEventListener("change",  ()=>{
