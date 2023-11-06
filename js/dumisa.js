@@ -144,6 +144,7 @@ const bibleBtn = $('#bibleBtn');
 let verseArray;
 
 function bibleApi(){
+
 $("body").classList.remove('overflow');
 
 let bibleContent = $('#bibleContent');

@@ -145,8 +145,9 @@ body {
   text-transform: capitalize;
 }
 
-a:hover,a:active{
-color: var(--tomato);
+a{
+color: var(--tomato) !important;
+font-weight: bolder !important;
 }
 
 p {
