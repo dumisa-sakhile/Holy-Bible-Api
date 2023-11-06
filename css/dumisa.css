@@ -145,6 +145,10 @@ body {
   text-transform: capitalize;
 }
 
+a:hover,a:active{
+color: var(--tomato);
+}
+
 p {
     font-size: .8rem;
     text-align: justify;
