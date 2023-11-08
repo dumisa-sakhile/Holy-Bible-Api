@@ -19,21 +19,6 @@
    -webkit-box-sizing: border-box;
            box-sizing: border-box;
     border: none;
-	transition: all 2.5s;
- @keyframes circle-in-center {
-  from {
-    clip-path: circle(0%);
-  }
-  to {
-    clip-path: circle(125%);
-  }
-}
-
-[transition-style="in:circle:center"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
-}
-  cursor: grab;
-  transition: background 3000;
 }
 
 :root {
@@ -260,11 +245,14 @@ body .footer .flex-row-wrap{
   cursor: -webkit-grab;
   cursor: grab;
   border-radius: 50%;
+  transition: all 2.5s;
+
 }
 
 .icon-up:hover,.icon-up:active{
 background: var(--theme);
 color: #000000;
+
 }
 
 .fld{
@@ -710,12 +698,31 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   background: #81b316;
   background: var(--background);
   border: .1px solid #000813 !important;
+  
 }
 
 #bibleContent :is(p:hover,p:active){
   background: #6f9915;
   color: #000;
   cursor: pointer;
+  transition: all 1s;
+ @keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:center"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+}
+  background: radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  background: -moz-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  background: -webkit-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  cursor: grab;
+  transition: background 1000;
 }
 
 #bibleContent{
@@ -821,6 +828,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     font-size: .9rem;
     border: .1px solid #222;
     font-size: 1rem;
+    
 }
 
 #chapters .span-active{
@@ -833,7 +841,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   color: #000 !important;
   font-weight: bolder;
   background: var(--tomato);
-    
 }
 
 #books{
@@ -871,6 +878,24 @@ p{
   display: grid;
   place-items: center;
   text-transform: capitalize;
+  transition: all 2.5s;
+ @keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:center"] {
+  animation: 1s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+}
+  background: radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  background: -moz-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  background: -webkit-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  cursor: grab;
+  transition: background 9000;
 }
 
 #cancelChapters{
@@ -882,6 +907,7 @@ p{
   color: var(--lime);
   background: transparent;
   font-weight: bolder;
+  
 }
 
 
