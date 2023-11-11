@@ -43,19 +43,19 @@ html:focus-within {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
+  background: radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  background: -moz-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
+  background: -webkit-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
   border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(52,61,70);
 }
 
 ::-webkit-scrollbar-button {
   display: none;
 }
-
-/*:is(body,.watchTop)*/
 
 ::-webkit-input-placeholder {
   color: #343f46 !important;
@@ -129,7 +129,6 @@ html:focus-within {
   }
 }
 
-
 @media(min-width: 800px){
 
 .fullscreen:hover,.fullscreen:active{
@@ -150,6 +149,7 @@ color: var(--tomato);
 }
 
 }
+
 @media (min-width: 859px){
 
 :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){

@@ -54,13 +54,7 @@ function copyText(theCopiedText, theTime, theUniversalTitle, theUniversalContent
     universalOn(theTime, theUniversalTitle, theUniversalContent)
   
   }
-  
-// $$("button").forEach(e => {
-//   e.addEventListener("click", (ev) => {
-//       ev.currentTarget.classList.toggle("scaled");
-//     });
-//   });
-  
+
 
 $$('.icon-up').forEach(e=>{
   e.addEventListener('click', ()=>{
@@ -69,6 +63,31 @@ window.scrollTo({ top: 0, behavior: "smooth" })
     
   })
 });
+
+function skeletonAppend(appendWhere,appendHowManyTimes){
+  for( let i = 0; i < appendHowManyTimes; i++){
+
+let skeletonMom = document.createElement('aside');
+skeletonMom.setAttribute('class','skeleton-mom flex-row');
+let skeletonChild1 = document.createElement('aside');
+skeletonChild1.setAttribute('class','skeleton-child skeleton-child-1 flex-column gap');
+let skeletonH6 = document.createElement('h6');
+let skeletonMain = document.createElement('div');
+skeletonChild1.append(skeletonH6,skeletonMain);
+
+
+let skeletonChild2 = document.createElement('aside');
+skeletonChild2.setAttribute('class','skeleton-child skeleton-child-2 flex-row gap');
+let skeletonChildDiv1 = document.createElement('div');
+let skeletonChildDiv2 = document.createElement('div');
+skeletonChild2.append(skeletonChildDiv1,skeletonChildDiv2);
+skeletonMom.append(skeletonChild1,skeletonChild2);
+
+      appendWhere.append(skeletonMom);
+      
+    }
+
+}
 
 
 // time functions
@@ -110,7 +129,7 @@ $$(`input`).forEach(e=>{
 });
 
 
-},)
+},10)
 // time functions end
 
 //copyright years
@@ -134,8 +153,6 @@ document.onkeydown = (e) => {
     return false;
 };
 
-let associatesValue  = 20;
-const skeletonTemplate = `<aside class="skeleton-mom flex-row"><aside class="skeleton-child skeleton-child-1 flex-column gap"><h6></h6><main></main></aside><aside class="skeleton-child skeleton-child-2 flex-row gap"><div></div><div></div></aside></aside>`;
 
 //bibleApi
 
@@ -694,14 +711,7 @@ $$(".footer").forEach(foot=>{
 
   universalOn(10000,'Oh No!', 'Book could not be found. Please type the correct book in its field and value as well');
   
-  for (let i = 0; i < associatesValue; i++) {
-  
-    $('#bibleContent').innerHTML += skeletonTemplate;
-  
-    //dictionaryPage.innerHTML += skeletonTemplate;
-  
-    //lyricsPage.innerHTML += skeletonTemplate;
-  }
+  skeletonAppend($('#bibleContent'),20);
 
   $$(".footer").forEach(foot=>{
     flex(foot);
@@ -888,4 +898,5 @@ back.addEventListener("click",()=>{
 $("#logo").addEventListener('click',(ev)=>{
   ev.preventDefault();
   window.scrollTo({ top: 0, behavior: "smooth" });
-})
+});
+

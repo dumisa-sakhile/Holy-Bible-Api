@@ -252,7 +252,6 @@ body .footer .flex-row-wrap{
 .icon-up:hover,.icon-up:active{
 background: var(--theme);
 color: #000000;
-
 }
 
 .fld{
@@ -319,8 +318,7 @@ label{
   height: 45px;
   background-image: -o-radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
   background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
-  color: #111;
-  font-weight: bolder;
+  color: #000;
   text-transform: uppercase;
   font-size: .9rem;
   font-family: var(--roboto);
@@ -362,14 +360,16 @@ label{
 .skeleton-mom{
   width: 340px;
   height: 130px;
+  border-radius: 4px;
   padding: 0;
   margin: 0;
   border-radius: 16px;
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  background: #BFCCE6;
+  /* -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  background: transparent;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  align-self: center !important;
 }
 
 .skeleton-child{
@@ -386,7 +386,7 @@ label{
   border-radius: 4px;
 }
 
-.skeleton-child-1 main{
+.skeleton-child-1 div{
   width: 80px;
   background: #343f46;
   height: 80px;
@@ -454,7 +454,7 @@ to{opacity: .9;
   min-height: 100px;
   max-height: 300px;
   padding: 20px;
-  background: var(--background);
+  background: var(--smoke);
   border-radius: 7px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -464,7 +464,7 @@ to{opacity: .9;
 }
 
 #content{
-  color: var(--smoke);
+  color: var(--background);
   text-transform: capitalize;
   font-weight: normal;
   font-family: var(--roboto);
@@ -479,25 +479,19 @@ to{opacity: .9;
 }
 
 #universalOkay{
-  font-family: var(--sans) !important;
-  background-image: -o-radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
-  background-image: radial-gradient(circle, #f42f2f, #f72727, #fa1e1d, #fd1311, #ff0000);
-  font-weight: bold;
   color: var(--smoke);
-  padding: 15px;
+  padding: 10px;
   border-radius: 4px;
-  font-size: .8rem;
-  text-transform: capitalize;
- -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
- backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
+  border-radius: 30px;
+  position: fixed;
+  top: 5px;
+  right: 10px;
 }
 
 #universalOkay:hover,#universalOkay:active{
-  -webkit-filter: grayscale(50%);
-          filter: grayscale(50%);
+  transform: scale(1.2);
 }
+
 
 .article,article,#form{
   padding-top: 30px;
@@ -695,34 +689,17 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   color: #fefefe;
   border-radius: 5px;
   font-family: var(--robo);
-  background: #81b316;
   background: var(--background);
-  border: .1px solid #000813 !important;
+  border: .1px solid #222 !important;
   
 }
 
 #bibleContent :is(p:hover,p:active){
-  background: #6f9915;
-  color: #000;
+  background: rgb(52,61,70);
+  color: #fefefe;
+  font-family: var(--raji);
   cursor: pointer;
-  transition: all 1s;
- @keyframes circle-in-center {
-  from {
-    clip-path: circle(0%);
-  }
-  to {
-    clip-path: circle(125%);
-  }
-}
-
-[transition-style="in:circle:center"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
-}
-  background: radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
-  background: -moz-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
-  background: -webkit-radial-gradient(circle, hsla(116, 50%, 47%, 1) 0%, hsla(116, 53%, 53%, 1) 58%, hsla(116, 74%, 62%, 1) 100%);
-  cursor: grab;
-  transition: background 1000;
+  
 }
 
 #bibleContent{
@@ -909,7 +886,6 @@ p{
   font-weight: bolder;
   
 }
-
 
 #cancelChapters:hover,#cancelChapters:active{
   border: .1px solid var(--tomato);
