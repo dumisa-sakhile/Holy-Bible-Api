@@ -704,7 +704,7 @@ bookName.textContent = outputBible.reference;
 bookTrans.textContent = outputBible.translation_name;
 
 $$(".footer").forEach(foot=>{
-  flex(foot);
+  grid(foot);
 });
 
 }).catch((err)=>{
@@ -714,7 +714,7 @@ $$(".footer").forEach(foot=>{
   skeletonAppend($('#bibleContent'),20);
 
   $$(".footer").forEach(foot=>{
-    flex(foot);
+    grid(foot);
   });
 
 })
@@ -730,7 +730,7 @@ $('#bibleContent').innerHTML = '';
   
 setTimeout(bibleApi);
 setTimeout(()=>{
-  flex($(".footer"));
+  grid($(".footer"));
 },3000);
 
 }, 1000);
