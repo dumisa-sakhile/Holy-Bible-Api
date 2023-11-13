@@ -127,7 +127,7 @@ $$(`input`).forEach(e=>{
 });
 
 
-},10)
+},100)
 // time functions end
 
 //copyright years
@@ -173,7 +173,6 @@ let url;
 let bookChapters = $("#bookChapters");
 
 console.clear();
-universalOff();
 
 if(bibleInput.toLowerCase() === '2 john'){
 
@@ -709,9 +708,7 @@ $$('#bibleContent p').forEach(para=>{
   });
 })
 
-$$(".footer").forEach(foot=>{
-  grid(foot);
-});
+grid($("footer"));
 
 }).catch((err)=>{
 
@@ -719,9 +716,7 @@ $$(".footer").forEach(foot=>{
   
   skeletonAppend($('#bibleContent'),20);
 
-  $$(".footer").forEach(foot=>{
-    grid(foot);
-  });
+  grid($("footer"));
 
 })
 
@@ -742,27 +737,39 @@ setTimeout(()=>{
 
 }, 1000);
 
+$('#bibleInputNo').addEventListener("keyup",  function(){
+
+  /[\W_]/.test(this.value) ? this.value = null : null;
+
+Number(this.value) ? null  : this.value = null;
+
+!this.value.includes('.') || !this.value.includes(',') || !this.value.includes('-') ? null  : this.value = null;
+
+})
+
+
 
 $('#bibleInputNo').addEventListener("change",  ()=>{
 
-$$(".footer").forEach(foot=>{
-    none(foot);
-  });
+  
+  if (Number($('#bibleInputNo').value.trim()) > Number($('#bookChapters').textContent) && $('#bibleInputNo').value.trim() !== '') {
 
+    $('#bibleInputNo').value = `${$('#bookChapters').textContent}`;
+  
+    universalOn(`please note that this chapter has only ${$('#bookChapters').textContent}, please do not exceed this range!`);
+  
+  } 
+  else if(Number($('#bibleInputNo').value.trim()) <= Number($('#bookChapters').textContent) && $('#bibleInputNo').value.trim() !== ''){
 
-if (Number($('#bibleInputNo').value) > Number($('#bookChapters').textContent)) {
+  none($("footer"));
 
-  $('#bibleInputNo').value = 1;
-
-  universalOn(`please note that this chapter has only ${$('#bookChapters').textContent}, please do not exceed this range!`);
   none($("#pagination"));
+
   bibleApi();
 
-} else {
-  none($("#pagination"));
-  bibleApi();
+  universalOff();
 
-}
+  } 
 
 });
 
@@ -835,9 +842,7 @@ $("#select").addEventListener("click",()=>{
   none($("#books"));
   $("#bibleInputNo").value = 1;
   bibleApi();
-  $$(".footer").forEach(foot=>{
-    none(foot);
-  });
+  none($("footer"));
 });
 
 $("#cancelChapters").addEventListener("click",()=>{
@@ -884,9 +889,7 @@ let back = $("#back");
 next.addEventListener("click",()=>{
   $("#bibleInputNo").value = Number($("#bibleInputNo").value) + 1;
 
-  $$(".footer").forEach(foot=>{
-    none(foot);
-  });
+  none($("footer"));
   none($("#pagination"));
   bibleApi();
 
@@ -895,9 +898,7 @@ next.addEventListener("click",()=>{
 back.addEventListener("click",()=>{
   $("#bibleInputNo").value = Number($("#bibleInputNo").value) - 1;
   
-  $$(".footer").forEach(foot=>{
-    none(foot);
-  });
+  none($("footer"));
   none($("#pagination"));
   bibleApi();
 });
