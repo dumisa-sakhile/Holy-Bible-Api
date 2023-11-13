@@ -24,15 +24,13 @@ function flex(element,direction) {
   element.style.flexDirection=direction;
 }
 
-function universalOn(duration,theUniversalTitle,theUniversalContent) {
+function universalOn(theUniversalContent) {
   
-  flex($("#universal"));
-  
-  $("#title").textContent=`${theUniversalTitle}`;
+  grid($("#universal"));
   
   $("#content").textContent=`${theUniversalContent}`;
   
-  setTimeout(()=>universalOff(), duration)
+  setTimeout(()=>universalOff(), 8888888888)
   
   }
   
@@ -47,11 +45,11 @@ function createEl(elementToCreate){
   
 $('#universal').addEventListener('click', universalOff);
   
-function copyText(theCopiedText, theTime, theUniversalTitle, theUniversalContent) {
+function copyText(theCopiedText) {
   
     navigator.clipboard.writeText(`${theCopiedText}`);
   
-    universalOn(theTime, theUniversalTitle, theUniversalContent)
+    universalOn(`Copied "${theCopiedText}"`)
   
   }
 
@@ -699,9 +697,17 @@ outputBible.verses.map(e=>{
 })
 
 
+
 bookRight.textContent = outputBible.translation_note;
 bookName.textContent = outputBible.reference;
 bookTrans.textContent = outputBible.translation_name;
+
+
+$$('#bibleContent p').forEach(para=>{
+  para.addEventListener('dblclick',(ev)=>{
+    copyText(ev.target.textContent);
+  });
+})
 
 $$(".footer").forEach(foot=>{
   grid(foot);
@@ -709,7 +715,7 @@ $$(".footer").forEach(foot=>{
 
 }).catch((err)=>{
 
-  universalOn(10000,'Oh No!', 'Book could not be found. Please type the correct book in its field and value as well');
+  universalOn('Book could not be found. Please type the correct book in its field and value as well');
   
   skeletonAppend($('#bibleContent'),20);
 
@@ -720,6 +726,7 @@ $$(".footer").forEach(foot=>{
 })
 
 }
+
 
 
 
@@ -747,7 +754,7 @@ if (Number($('#bibleInputNo').value) > Number($('#bookChapters').textContent)) {
 
   $('#bibleInputNo').value = 1;
 
-  universalOn(10000, 'Chapters number exceeded', `please note that this chapter has only ${$('#bookChapters').textContent}, please do not exceed this range!`);
+  universalOn(`please note that this chapter has only ${$('#bookChapters').textContent}, please do not exceed this range!`);
   none($("#pagination"));
   bibleApi();
 
@@ -843,7 +850,7 @@ none($("#books"));
 
 
 $("#bibleInput").addEventListener("click",()=>{
-  flex($("#books"));
+  grid($("#books"));
   $("body").classList.add('overflow');
   $("#bibleInput").blur();
 });
@@ -899,4 +906,5 @@ $("#logo").addEventListener('click',(ev)=>{
   ev.preventDefault();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
 

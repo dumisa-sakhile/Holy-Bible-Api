@@ -443,38 +443,32 @@ to{opacity: .9;
   min-height: 100px;
   max-height: 300px;
   padding: 20px;
-  background: var(--smoke);
+  background: rgb(52,61,70);
   border-radius: 7px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: var(--border);
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto 30px;
 }
 
 #content{
-  color: var(--background);
+  color: var(--smoke);
   text-transform: capitalize;
   font-weight: normal;
   font-family: var(--roboto);
   font-weight: normal;
 }
 
-#title{
-  font-size: .8rem;
-  color: var(--theme);
-  font-weight: bold; 
-  text-transform: capitalize;
-}
 
 #universalOkay{
   color: var(--smoke);
   padding: 10px;
   border-radius: 4px;
   border-radius: 30px;
-  position: fixed;
-  top: 5px;
-  right: 10px;
 }
 
 #universalOkay:hover,#universalOkay:active{
@@ -748,8 +742,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     background: rgb(52,61,70);
     border-radius: 8px;
     gap: 20px;
-    
-
 }
 
 #chapters{
@@ -770,7 +762,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   overflow-y: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      
 }
 
 #chapters span{
@@ -813,6 +804,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   position: fixed;
   z-index: 4;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);

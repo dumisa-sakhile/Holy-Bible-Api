@@ -136,8 +136,8 @@ color: var(--tomato);
 }
 
 .chapter{
+  left: 0;
   position: fixed;
-  left: 10px;
   width: calc(220px * 2);
 }
 
