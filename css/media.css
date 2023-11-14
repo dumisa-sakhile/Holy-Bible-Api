@@ -39,7 +39,6 @@ html:focus-within {
 ::-webkit-scrollbar-track {
   background: var(--background);
   border-radius: 30px;
-
 }
 
 ::-webkit-scrollbar-thumb {
@@ -187,30 +186,30 @@ color: var(--tomato);
 
 @media (min-width: 1300px){
       :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-        width: 350px !important
+        width:600px !important
 }
 }
   
 @media (min-width: 1400px){
         :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-          width: 400px !important;
+          width:600px !important;
 }
   
         #navigation > article{
-          width: 500px !important;
+          width:600px !important;
         }
       
         }
   
 @media (min-width: 1500px){
       :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-        width: 450px !important;
+        width:600px !important;
 }
 }
   
 @media (min-width: 1600px){
       :is(.article,article,#biblePage #bibleContent p,#form), .flex-column-wrap :is(.article,article){
-        width: 500px !important;
+        width:600px !important;
 }
 }
   
