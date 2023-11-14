@@ -146,7 +146,6 @@ document.onkeydown = (e) => {
     return false;
 };
 
-
 //bibleApi
 
 const bibleBtn = $('#bibleBtn');
@@ -667,15 +666,14 @@ else if(bibleInput.toLowerCase() === 'revelation'){
 
 bibleContent.innerHTML = null;
 
-fetch(url)
-  .then(res=>res.json())
+axios.get(url)
   .then((outputBible)=>{
 
 
 //console.log(outputBible);
 
 
-outputBible.verses.map(e=>{
+outputBible.data.verses.map(e=>{
   return e.text;
 }).forEach((e,index)=>{
   
@@ -717,20 +715,8 @@ grid($("footer"));
 
 }
 
-
-
-
 //1 sec delay for opening skeleton loading
-setTimeout(() => {
-  
-$('#bibleContent').innerHTML = '';
-  
-setTimeout(bibleApi);
-setTimeout(()=>{
-  grid($(".footer"));
-},3000);
-
-}, 1000);
+bibleApi();
 
 $('#bibleInputNo').addEventListener("keyup",  function(){
 
@@ -740,9 +726,7 @@ Number(this.value) ? null  : this.value = null;
 
 !this.value.includes('.') || !this.value.includes(',') || !this.value.includes('-') ? null  : this.value = null;
 
-})
-
-
+});
 
 $('#bibleInputNo').addEventListener("change",  ()=>{
 
@@ -794,16 +778,15 @@ document.onkeydown = function(evt) {
 
 function booksFetch(){
 
-fetch(`booksOfTheBible.json`)
-.then(res=>res.json())
-.then(booksData=>{
+axios.get(`booksOfTheBible.json`)
+.then((booksData)=>{
 
-const oldBooks = booksData.filter(book=>book.type == 'old');
+const oldBooks = booksData.data.filter(book=>book.type == 'old');
   
-const newBooks = booksData.filter(book=>book.type == 'new');
+const newBooks = booksData.data.filter(book=>book.type == 'new');
   
 
-  booksData.map(book=>{
+  booksData.data.map(book=>{
     let chapters = $("#chapters");
     let span = createEl('span');
     span.textContent = book.name;
@@ -847,7 +830,6 @@ $("#cancelChapters").addEventListener("click",()=>{
 
 
 none($("#books"));
-
 
 $("#bibleInput").addEventListener("click",listenForInput);
 $("#bibleInput").addEventListener("focus",listenForInput);
