@@ -30,12 +30,9 @@ function universalOn(theUniversalContent) {
   
   $("#content").textContent=`${theUniversalContent}`;
   
-  setTimeout(()=>universalOff(), 8888888888)
-  
   }
   
 function universalOff() {
-  
     none($("#universal"));
   }
   
@@ -52,7 +49,6 @@ function copyText(theCopiedText) {
     universalOn(`Copied "${theCopiedText}"`)
   
   }
-
 
 $$('.icon-up').forEach(e=>{
   e.addEventListener('click', ()=>{
@@ -105,7 +101,6 @@ bibleInputNo <=1 ? none(back) : grid(back);
 bibleInputNo <  Number(allBookChapters.textContent) ? grid(next) : none(next);
 
 
-  
 //preventions
 $$('img').forEach(e=>{
 e.setAttribute("onContextMenu","return false;");
@@ -854,12 +849,16 @@ $("#cancelChapters").addEventListener("click",()=>{
 none($("#books"));
 
 
-$("#bibleInput").addEventListener("click",()=>{
+$("#bibleInput").addEventListener("click",listenForInput);
+$("#bibleInput").addEventListener("focus",listenForInput);
+$("#bibleInput").addEventListener("keyup",listenForInput);
+$("#bibleInput").addEventListener("touchstart",listenForInput);
+
+function listenForInput(){
   grid($("#books"));
   $("body").classList.add('overflow');
   $("#bibleInput").blur();
-});
-
+}
 
 let fullScreen = $(".fullscreen");
 

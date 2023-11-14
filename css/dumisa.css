@@ -33,7 +33,7 @@
   --faded: rgba(5, 6, 8, 0.2);
   --theme: var(--lime);
   --black: var(--smoke);
-  --background: #17181c;
+  --background: #212D33;
 }
 
 .flex-column{
@@ -464,7 +464,6 @@ to{opacity: .9;
   font-weight: normal;
 }
 
-
 #universalOkay{
   color: var(--smoke);
   padding: 10px;
@@ -475,7 +474,6 @@ to{opacity: .9;
 #universalOkay:hover,#universalOkay:active{
   transform: scale(1.2);
 }
-
 
 .article,article,#form{
   padding-top: 30px;
@@ -581,51 +579,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   background: none;
 }
 
-.list{
-  font-family: var(--raji);
-  font-size: .8rem; 
-  text-transform: capitalize;
-  
-}
-
-:is(.list) li{
-  padding: 10px;
-  color: var(--smoke);
-  font-size: .9rem;
-
-}
-
-#bibleSuggestions{
-	margin-left: 5%;
-	margin-top: 3px;
-  width: 90%;
-  list-style: none;
-}
-
-#bibleSuggestions{
-  margin: 0;
-}
-
-#bibleSuggestions li{
-  font-family: var(--raji);
-  font-size: 1rem;
-  padding: 12px;
-  margin-bottom: 5px;
-  color: #000;
-  background: #BFCCE6;
-  border-radius: 4px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-#bibleSuggestions :is(li:hover,li:active){
-  background-image: -o-radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
-  background-image: radial-gradient(circle, #67bb0b, #71b914, #7ab81c, #83b623, #8ab52a);
-  font-family: var(--sans);
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
 #bibleContent{
   width: 90%;
   text-align: center;
@@ -707,7 +660,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   height: 80px; 
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   background:#ccc;
 }
 
@@ -865,7 +817,6 @@ p{
   color: var(--lime);
   background: transparent;
   font-weight: bolder;
-  
 }
 
 #cancelChapters:hover,#cancelChapters:active{
@@ -903,7 +854,6 @@ p{
 
 #pagination p{
   color: #fff;
-
 }
 
 #next,#back{
@@ -933,8 +883,8 @@ caret-color: var(--theme);
 #query fieldset:first-child{
   width: 300px;
   background: rgb(52,61,70);
-  border: .1px solid #000813;
-  border-radius: 10px;
+  border: .1px solid rgb(17,27,33);
+  border-radius: 5px;
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -944,8 +894,8 @@ caret-color: var(--theme);
   width: 110px;
   height: 80px;
   background: rgb(52,61,70);
-  border: .1px solid #000813 !important;
-  border-radius: 10px;
+  border: .1px solid rgb(17,27,33) !important;
+  border-radius: 5px;
 }
 
 #query legend{
