@@ -206,7 +206,7 @@ body footer{
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 padding-bottom: 70px;
-background:  #363636;
+background:  #222;
 margin-bottom: 10px;
 border: .1px solid #222;
 -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -238,10 +238,6 @@ footer > main > h1{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
--webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(16px) saturate(180%);
--webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 
@@ -658,7 +654,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   color: #fefefe;
   border-radius: 5px;
   font-family: var(--robo);
-  background:  #363636;
+  background:  #222;
   border: .1px solid #222 !important;
   align-self: stretch;
   
