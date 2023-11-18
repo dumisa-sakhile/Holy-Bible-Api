@@ -173,7 +173,7 @@ color: var(--tomato);
     display: block;
     position: absolute;
     height: 70px;
-    top: 80px;
+    top: 60px;
     left: 50px;
     z-index: 3;
     cursor: -webkit-grab;

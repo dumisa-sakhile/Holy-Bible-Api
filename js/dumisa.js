@@ -157,7 +157,7 @@ function bibleApi(){
 $("body").classList.remove('overflow');
 
 let bibleContent = $('#bibleContent');
-
+let bookChapterActive = $('#bookChapterActive');
 let bookName = $('#bookName');
 let bookTrans = $('#bookTrans');
 let bookRight = $('#bookRight');
@@ -690,11 +690,12 @@ outputBible.data.verses.map(e=>{
 
 
 
-bookRight.textContent = outputBible.translation_note;
-bookName.textContent = outputBible.reference;
-bookTrans.textContent = outputBible.translation_name;
+bookRight.textContent = outputBible.data.translation_note;
+bookName.textContent = outputBible.data.reference.slice(outputBible.data.reference.indexOf(' ') + 1, outputBible.data.reference.indexOf(' ') + 2);
+bookTrans.textContent = outputBible.data.translation_name;
+bookChapterActive.textContent = outputBible.data.reference.slice(0, outputBible.data.reference.indexOf(' '));
 
-
+//
 $$('#bibleContent p').forEach(para=>{
   para.addEventListener('dblclick',(ev)=>{
     copyText(ev.target.textContent);
@@ -890,3 +891,13 @@ $("#logo").addEventListener('click',(ev)=>{
 });
 
 
+$("#books").addEventListener('click',function(){
+
+  window.innerWidth >= 800 ? $("#cancelChapters").click() : null;
+      
+  });
+  
+  $(".chapter").addEventListener('click',(ev)=>{
+ev.stopPropagation();
+  })
+  

@@ -20,7 +20,7 @@
 <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     
-<meta name="theme-color" content="#17181c" />
+<meta name="theme-color" content=" #363636" />
 
 <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
@@ -44,31 +44,35 @@
 <!--Bible api-->
 <section id="biblePage">
 
-<br>
+<header id="header">
+  <span id="logo" class="reflect">Holy Bible: King James Version (KJV)</span>
 
-<div id="query">
+  <div id="query">
 
-<fieldset>
+    <fieldset>
+        
+    <legend>The Book Of :</legend>
     
-<legend>The Book Of :</legend>
-
-<input type="search" name="bibleInput" id="bibleInput" placeholder="Bible book" autocomplete="off" value="john" class="input"/>
-</fieldset>
-
-<fieldset>
+    <input type="search" name="bibleInput" id="bibleInput" placeholder="Bible book" autocomplete="off" value="john" class="input"/>
+    </fieldset>
     
-  <legend>Chapter :</legend>
-  
-  <input type="number" name="bibleInputNo" id="bibleInputNo" placeholder="Chapter" autocomplete="off" min="1" max="" value="1" class="input"/>
+    <fieldset>
+        
+      <legend>Chapter :</legend>
+      
+      <input type="number" name="bibleInputNo" id="bibleInputNo" placeholder="Chapter" autocomplete="off" min="1" max="" value="1" class="input"/>
+    
+      
+      </fieldset>
+    
+    </div>
+    
+</header>
 
-  
-  </fieldset>
-
-</div>
 
 <br><br>
    
-<span id="logo">Holy Bible: King James Version (KJV)</span>
+
 
 <section id="books">
 
@@ -92,32 +96,52 @@
 
 <header id="pagination">
       <button id="back">Prev</button>
-      <p>The Book of  <span class="condensed" id="bookName"></span> which has <span class="condensed" id="bookChapters"></span> Chapter(s).</p>
-      <button id="next">Next</button>.
+      <p>Chapter  <span class="condensed" id="bookName"></span> of <span id="bookChapterActive" class="condensed">John</span> which has <span class="condensed" id="bookChapters"></span> Chapter(s).</p>
+      <button id="next">Next</button>
       </header>
   
 <footer class="footer">
 
 <main>
-  <h1>API Rights</h1>
-  <p>Translation: <span class="highlight" id="bookTrans"></span>&nbsp;&nbsp;Copyright: <span class="highlight" id="bookRight"></span></p>
+
+<p>API Rights</p>
+
+<div class="flex-column">
+<p>Translation:&nbsp;<span class="highlight" id="bookTrans"></span></p>
+
+<p>Copyright:&nbsp;<span class="highlight" id="bookRight"></span></p>
+
+</div>
+
 </main>
 
 <main>
-  <h1>Attribution</h1>
+  <p>Attribution</p>
+  <p>API powered by <a href="https://bible-api.com" class="highlight">bible-api.com</a></p>
   <p> Logo made by <a href="http://www.dariusdan.com" title="Darius Dan" class="highlight" > Darius Dan </a> from <a href="https://www.flaticon.com/" title="Flaticon" class="highlight" >www.flaticon.com</a></p>
 </main>
 
 <main>
-  <h1>Settings</h1>
+  <p>Settings & Tips</p>
+
+  <div class="flex-column">
   <p class="fullscreen highlight flex-row gap"></p>
+  <p>To copy a verse, <span class="highlight">Double Click it</span>.</p>
+
+  </div>
+
 </main>
 
 <main>
-  <h1>Rights</h1>
+ 
+  <p>Rights</p>
 
+<div class="flex-column">
 
-  <p class="flex-row"><span class="highlight">&nbsp;&copy;</span>&nbsp;<a href="https://dumisa-web.netlify.app/" class="highlight" target="_blank"><span id="copyrightYears"></span>&nbsp;Dumisa</a>&nbsp; <span class="reservrYear"></span>.&nbsp;All&nbsp;rights&nbsp;reserved.</p>
+ <p class="flex-row"><span class="highlight">&nbsp;&copy;</span>&nbsp;<a href="https://dumisa-web.netlify.app/" class="highlight" target="_blank"><span id="copyrightYears"></span>&nbsp;Dumisa</a>&nbsp; <span class="reservrYear"></span>.&nbsp;All&nbsp;rights&nbsp;reserved.</p>
+ 
+ <img src="images/owner.svg" alt="logo" width="40%">
+</div>
 
 </main>
     

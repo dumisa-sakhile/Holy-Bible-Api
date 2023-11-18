@@ -119,7 +119,7 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color:  #363636;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -198,14 +198,21 @@ h1{
 }
 
 body footer{
+  border-radius: 10px;
   position: relative;
-  width: 100%;
+  width: 98%;
   display: grid;
   gap: 30px;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 padding-bottom: 70px;
-background: var(--background);
+background:  #363636;
+margin-bottom: 10px;
+border: .1px solid #222;
+-webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 footer > main{
@@ -221,6 +228,22 @@ footer > main{
 footer > main > h1{
   font-size: 1rem;
 }
+
+#header{
+  width: 100%;
+  position: relative;
+  height: 120px;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+-webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
 
 .icon-up{
   padding: 15px;
@@ -322,6 +345,11 @@ label{
   cursor: -webkit-grab;
   cursor: grab;
   letter-spacing: .1rem;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: .1px solid #222;
   transition: all 2.5s;
  @keyframes circle-in-center {
   from {
@@ -443,16 +471,21 @@ to{opacity: .9;
   min-height: 100px;
   max-height: 300px;
   padding: 20px;
-  background: rgb(52,61,70);
+  background:  #222;
   border-radius: 7px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: var(--border);
+  border: .1px solid #222;
   display: none;
   place-items: center;
   grid-template-columns: auto 30px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: .1px solid #222;
 }
 
 #content{
@@ -625,8 +658,9 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   color: #fefefe;
   border-radius: 5px;
   font-family: var(--robo);
-  background: rgb(52,61,70);
+  background:  #363636;
   border: .1px solid #222 !important;
+  align-self: stretch;
   
 }
 
@@ -691,9 +725,10 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     max-height: 100%;
     border: .1px solid #222;
     padding: 20px 10px;
-    background: rgb(52,61,70);
+    background:  #222;
     border-radius: 8px;
     gap: 20px;
+    cursor: default;
 }
 
 #chapters{
@@ -764,6 +799,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   display: grid;
   place-items: center;
   padding: 20px 0;
+  cursor: grab;
 }
 
 p{
@@ -844,7 +880,7 @@ p{
   gap: 10px;
   border: .1px solid #000813 !important;
   padding: 10px;
-  background: var(--background);
+  background:  #222;
   min-width: 20px;
   border-radius: 10px;
   z-index: 3;
@@ -882,20 +918,27 @@ caret-color: var(--theme);
 
 #query fieldset:first-child{
   width: 300px;
-  background: rgb(52,61,70);
-  border: .1px solid rgb(17,27,33);
+  background:  #222;
   border-radius: 5px;
   cursor: -webkit-grab;
   cursor: grab;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: .1px solid #222;
 }
-
 
 #query fieldset:last-child{
   width: 110px;
   height: 80px;
-  background: rgb(52,61,70);
-  border: .1px solid rgb(17,27,33) !important;
+  background:  #222;
   border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: .1px solid #222;
 }
 
 #query legend{
