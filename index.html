@@ -37,6 +37,14 @@
 
 <script src="https://kit.fontawesome.com/6256a3c9dc.js" crossorigin="anonymous"></script>
 
+  <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+
+  <script src="js/dumisa.js" type="text/javascript" charset="utf-8" defer></script>
+  
+  <script src="pwa.js" type="text/javascript" charset="utf-8" defer></script>
+  
+  <script src="sw.js" type="text/javascript" charset="utf-8" defer></script>
+  
 </head>
 
 <body>
@@ -95,10 +103,14 @@
 <div id="bibleContent"></div>
 
 <header id="pagination">
-      <button id="back">Prev</button>
-      <p>Chapter  <span class="condensed" id="bookName"></span> of <span id="bookChapterActive" class="condensed">John</span> which has <span class="condensed" id="bookChapters"></span> Chapter(s).</p>
-      <button id="next">Next</button>
-      </header>
+
+<button id="back">Prev</button>
+      
+<p><span class="condensed" id="bookName"></span> out of <span class="condensed" id="bookChapters"></span> Chapter(s).</p>
+
+<button id="next">Next</button>
+</header>
+      
   
 <footer class="footer">
 
@@ -165,12 +177,4 @@
   
   </body>
   
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-  <script src="js/dumisa.js" type="text/javascript" charset="utf-8"></script>
-  
-  <script src="pwa.js" type="text/javascript" charset="utf-8"></script>
-  
-  <script src="sw.js" type="text/javascript" charset="utf-8"></script>
-  
-  </html>
+</html>

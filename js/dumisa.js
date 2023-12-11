@@ -152,567 +152,172 @@ const bibleBtn = $('#bibleBtn');
 
 let verseArray;
 
-function bibleApi(){
+const maxChapters = {
+  'genesis': 50,
+  'exodus': 40,
+  'leviticus': 27,
+  'numbers': 36,
+  'deuteronomy': 34,
+  'joshua': 24,
+  'judges': 21,
+  'ruth': 4,
+  '1 samuel': 31,
+  '2 samuel': 24,
+  '1 kings': 22,
+  '2 kings': 25,
+  '1 chronicles': 29,
+  '2 chronicles': 36,
+  'ezra': 10,
+  'nehemiah': 13,
+  'esther': 10,
+  'job': 42,
+  'psalms': 150,
+  'proverbs': 31,
+  'ecclesiastes': 12,
+  'song of solomon': 8,
+  'isaiah': 66,
+  'jeremiah': 52,
+  'lamentations': 5,
+  'ezekiel': 48,
+  'daniel': 12,
+  'hosea': 14,
+  'joel': 3,
+  'amos': 9,
+  'obadiah': 1,
+  'jonah': 4,
+  'micah': 7,
+  'nahum': 3,
+  'habakkuk': 3,
+  'zephaniah': 3,
+  'haggai': 2,
+  'zechariah': 14,
+  'malachi': 4,
+  'matthew': 28,
+  'mark': 16,
+  'luke': 24,
+  'john': 21,
+  'acts': 28,
+  'romans': 16,
+  '1 corinthians': 16,
+  '2 corinthians': 13,
+  'galatians': 6,
+  'ephesians': 6,
+  'philippians': 4,
+  'colossians': 4,
+  '1 thessalonians': 5,
+  '2 thessalonians': 3,
+  '1 timothy': 6,
+  '2 timothy': 4,
+  'titus': 3,
+  'philemon': 1,
+  'hebrews': 13,
+  'james': 5,
+  '1 peter': 5,
+  '2 peter': 3,
+  '1 john': 5,
+  '2 john': 1,
+  '3 john': 1,
+  'jude': 1,
+  'revelation': 22
+};
 
-$("body").classList.remove('overflow');
+async function bibleApi() {
 
-let bibleContent = $('#bibleContent');
-let bookChapterActive = $('#bookChapterActive');
-let bookName = $('#bookName');
-let bookTrans = $('#bookTrans');
-let bookRight = $('#bookRight');
-let bibleInput = $('#bibleInput').value;
-let bibleInputNo = $('#bibleInputNo').value;
-let url;
-let bookChapters = $("#bookChapters");
+  $("body").classList.remove('overflow');
 
-console.clear();
+  let bibleContent = $('#bibleContent');
+  let bookName = $('#bookName');
+  let bookTrans = $('#bookTrans');
+  let bookRight = $('#bookRight');
+  let bibleInput = $('#bibleInput').value;
+  let bibleInputNo = $('#bibleInputNo').value;
+  let url;
+  let bookChapters = $("#bookChapters");
 
-if(bibleInput.toLowerCase() === '2 john'){
+  console.clear();
 
-  url = `https://bible-api.com/2john+1:1-13?translation=kjv`;
+  if (bibleInput.toLowerCase() === '2 john') {
 
-}
-else if(bibleInput.toLowerCase() === '3 john'){
+    url = `https://bible-api.com/2john+1:1-13?translation=kjv`;
 
-  url = `https://bible-api.com/3john+1:1-14?translation=kjv`;
+  }
+  else if (bibleInput.toLowerCase() === '3 john') {
 
-}
-else if(bibleInput.toLowerCase() === 'obadiah'){
+    url = `https://bible-api.com/3john+1:1-14?translation=kjv`;
 
-  url = `https://bible-api.com/obadiah+1:1-21?translation=kjv`;
+  }
+  else if (bibleInput.toLowerCase() === 'obadiah') {
 
-}
-else if(bibleInput.toLowerCase() === 'jude'){
+    url = `https://bible-api.com/obadiah+1:1-21?translation=kjv`;
 
-  url = `https://bible-api.com/jude+1:1-25?translation=kjv`;
+  }
+  else if (bibleInput.toLowerCase() === 'jude') {
 
-}
-else if(bibleInput.toLowerCase() === 'philemon'){
+    url = `https://bible-api.com/jude+1:1-25?translation=kjv`;
 
-  url = `https://bible-api.com/philemon+1:1-25?translation=kjv`;
+  }
+  else if (bibleInput.toLowerCase() === 'philemon') {
 
-}
-else{
+    url = `https://bible-api.com/philemon+1:1-25?translation=kjv`;
 
-  url = `https://bible-api.com/${bibleInput}+${bibleInputNo}?translation=kjv`;
-}
+  }
+  else {
 
+    url = `https://bible-api.com/${bibleInput}+${bibleInputNo}?translation=kjv`;
+  }
 
+  const theBookName = bibleInput.toLowerCase();
+  if (theBookName in maxChapters) {
+    const maxChapter = maxChapters[theBookName];
+    $('#bibleInputNo').setAttribute('max', maxChapter);
+    bookChapters.textContent = maxChapter;
+  }
 
-if(bibleInput.toLowerCase() === 'genesis'){
+  bibleContent.innerHTML = null;
 
-  $('#bibleInputNo').setAttribute('max', 50);
+  try {
+    const outputBible = await axios.get(url);
 
-  bookChapters.textContent = 50;
-  
-  }
-  else if(bibleInput.toLowerCase() === 'exodus'){
-  
-    $('#bibleInputNo').setAttribute('max',  40);
-    
-    bookChapters.textContent = 40;
-    
-  }
-else if(bibleInput.toLowerCase() === 'leviticus'){
-  
-    $('#bibleInputNo').setAttribute('max', 27);
-    
-    bookChapters.textContent = 27;
-    
-  }
-else if(bibleInput.toLowerCase() === 'numbers'){
-  
-    $('#bibleInputNo').setAttribute('max', 36);
-    
-    bookChapters.textContent = 36;
-    
-  }
-else if(bibleInput.toLowerCase() === 'deuteronomy'){
-  
-    $('#bibleInputNo').setAttribute('max', 34);
-    
-    bookChapters.textContent = 34;
-    
-  }
-else if(bibleInput.toLowerCase() === 'joshua'){
-  
-    $('#bibleInputNo').setAttribute('max', 24);
-    
-    bookChapters.textContent = 24;
-    
-  }
-else if(bibleInput.toLowerCase() === 'judges'){
-  
-    $('#bibleInputNo').setAttribute('max', 21);
-    
-    bookChapters.textContent = 21;
-    
-  }
-else if(bibleInput.toLowerCase() === 'ruth'){
-  
-    $('#bibleInputNo').setAttribute('max', 4);
-    
-    bookChapters.textContent = 4;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 samuel'){
-  
-    $('#bibleInputNo').setAttribute('max', 31);
-    
-    bookChapters.textContent = 31;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 samuel'){
-  
-    $('#bibleInputNo').setAttribute('max', 24);
-    
-    bookChapters.textContent = 24;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 kings'){
-  
-    $('#bibleInputNo').setAttribute('max', 22);
-    
-    bookChapters.textContent = 22;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 kings'){
-  
-    $('#bibleInputNo').setAttribute('max', 25);
-    
-    bookChapters.textContent = 25;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 chronicles'){
-  
-    $('#bibleInputNo').setAttribute('max', 29);
-    
-    bookChapters.textContent = 29;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 chronicles'){
-  
-    $('#bibleInputNo').setAttribute('max', 36);
-    
-    bookChapters.textContent = 36;
-    
-  }
-else if(bibleInput.toLowerCase() === 'ezra'){
-  
-    $('#bibleInputNo').setAttribute('max', 10);
-    
-    bookChapters.textContent = 10;
-    
-  }
-else if(bibleInput.toLowerCase() === 'nehemiah'){
-  
-    $('#bibleInputNo').setAttribute('max', 13);
-    
-    bookChapters.textContent = 13;
-    
-  }
-else if(bibleInput.toLowerCase() === 'esther'){
-  
-    $('#bibleInputNo').setAttribute('max', 10);
-    
-    bookChapters.textContent = 10;
-    
-  }
-else if(bibleInput.toLowerCase() === 'job'){
-  
-    $('#bibleInputNo').setAttribute('max', 42);
-    
-    bookChapters.textContent = 42;
-    
-  }
-else if(bibleInput.toLowerCase() === 'psalms'){
-  
-    $('#bibleInputNo').setAttribute('max', 150);
-    
-    bookChapters.textContent = 150;
-    
-  }
-else if(bibleInput.toLowerCase() === 'proverbs'){
-  
-    $('#bibleInputNo').setAttribute('max', 31);
-    
-    bookChapters.textContent = 31;
-    
-  }
-else if(bibleInput.toLowerCase() === 'ecclesiastes'){
-  
-    $('#bibleInputNo').setAttribute('max', 12);
-    
-    bookChapters.textContent = 12;
-    
-  }
-else if(bibleInput.toLowerCase() === 'song of solomon'){
-  
-    $('#bibleInputNo').setAttribute('max', 8);
-    
-    bookChapters.textContent = 8;
-    
-  }
-else if(bibleInput.toLowerCase() === 'isaiah'){
-  
-    $('#bibleInputNo').setAttribute('max', 66);
-    
-    bookChapters.textContent = 66;
-    
-  }
-else if(bibleInput.toLowerCase() === 'jeremiah'){
-  
-    $('#bibleInputNo').setAttribute('max', 52);
-    
-    bookChapters.textContent = 52;
-    
-  }
-else if(bibleInput.toLowerCase() === 'lamentations'){
-  
-    $('#bibleInputNo').setAttribute('max', 5);
-    
-    bookChapters.textContent = 5;
-    
-  }
-else if(bibleInput.toLowerCase() === 'ezekiel'){
-  
-    $('#bibleInputNo').setAttribute('max', 48);
-    
-    bookChapters.textContent = 48;
-    
-  }
-else if(bibleInput.toLowerCase() === 'daniel'){
-  
-    $('#bibleInputNo').setAttribute('max', 12);
-    
-    bookChapters.textContent = 12;
-    
-  }
-else if(bibleInput.toLowerCase() === 'hosea'){
-  
-    $('#bibleInputNo').setAttribute('max', 14);
-    
-    bookChapters.textContent = 14;
-    
-  }
-else if(bibleInput.toLowerCase() === 'joel'){
-  
-    $('#bibleInputNo').setAttribute('max', 3);
-    
-    bookChapters.textContent = 3;
-    
-  }
-else if(bibleInput.toLowerCase() === 'amos'){
-  
-    $('#bibleInputNo').setAttribute('max', 9);
-    
-    bookChapters.textContent = 9;
-    
-  }
-else if(bibleInput.toLowerCase() === 'obadiah'){
-  
-    $('#bibleInputNo').setAttribute('max', 1);
-    
-    bookChapters.textContent = 1;
-    
-  }
-else if(bibleInput.toLowerCase() === 'jonah'){
-  
-    $('#bibleInputNo').setAttribute('max', 4);
-    
-    bookChapters.textContent = 4;
-    
-  }
-else if(bibleInput.toLowerCase() === 'micah'){
-  
-    $('#bibleInputNo').setAttribute('max', 7);
-    
-    bookChapters.textContent = 7;
-    
-  }
-else if(bibleInput.toLowerCase() === 'nahum'){
-  
-    $('#bibleInputNo').setAttribute('max', 3);
-    
-    bookChapters.textContent = 3;
-    
-  }
-else if(bibleInput.toLowerCase() === 'habakkuk'){
-  
-    $('#bibleInputNo').setAttribute('max', 3);
-    
-    bookChapters.textContent = 3;
-    
-  }
-else if(bibleInput.toLowerCase() === 'zephaniah'){
-  
-    $('#bibleInputNo').setAttribute('max', 3);
-    
-    bookChapters.textContent = 3;
-    
-  }
-else if(bibleInput.toLowerCase() === 'haggai'){
-  
-    $('#bibleInputNo').setAttribute('max', 2);
-    
-    bookChapters.textContent = 2;
-    
-  }
-else if(bibleInput.toLowerCase() === 'zechariah'){
-  
-    $('#bibleInputNo').setAttribute('max', 14);
-    
-    bookChapters.textContent = 14;
-    
-  }
-else if(bibleInput.toLowerCase() === 'malachi'){
-  
-    $('#bibleInputNo').setAttribute('max', 4);
-    
-    bookChapters.textContent = 4;
-    
-  }
-else if(bibleInput.toLowerCase() === 'matthew'){
-  
-    $('#bibleInputNo').setAttribute('max', 28);
-    
-    bookChapters.textContent = 28;
-    
-  }
-else if(bibleInput.toLowerCase() === 'mark'){
-  
-    $('#bibleInputNo').setAttribute('max', 16);
-    
-    bookChapters.textContent = 16;
-    
-  }
-else if(bibleInput.toLowerCase() === 'luke'){
-  
-    $('#bibleInputNo').setAttribute('max', 24);
-    
-    bookChapters.textContent = 24;
-    
-  }
-else if(bibleInput.toLowerCase() === 'john'){
-  
-    $('#bibleInputNo').setAttribute('max', 21);
-    
-    bookChapters.textContent = 21;
-    
-  }
-else if(bibleInput.toLowerCase() === 'acts'){
-  
-    $('#bibleInputNo').setAttribute('max', 28);
-    
-    bookChapters.textContent = 28;
-    
-  }
-else if(bibleInput.toLowerCase() === 'romans'){
-  
-    $('#bibleInputNo').setAttribute('max', 16);
-    
-    bookChapters.textContent = 16;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 corinthians'){
-  
-    $('#bibleInputNo').setAttribute('max', 16);
-    
-    bookChapters.textContent = 16;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 corinthians'){
-  
-    $('#bibleInputNo').setAttribute('max', 13);
-    
-    bookChapters.textContent = 13;
-    
-  }
-else if(bibleInput.toLowerCase() === 'galatians'){
-  
-    $('#bibleInputNo').setAttribute('max', 6);
-    
-    bookChapters.textContent = 6;
-    
-  }
-else if(bibleInput.toLowerCase() === 'ephesians'){
-  
-    $('#bibleInputNo').setAttribute('max', 6);
-    
-    bookChapters.textContent = 6;
-    
-  }
-else if(bibleInput.toLowerCase() === 'philippians'){
-  
-    $('#bibleInputNo').setAttribute('max', 4);
-    
-    bookChapters.textContent = 4;
-    
-  }
-else if(bibleInput.toLowerCase() === 'colossians'){
-  
-    $('#bibleInputNo').setAttribute('max', 4);
-    
-    bookChapters.textContent = 4;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 thessalonians'){
-  
-    $('#bibleInputNo').setAttribute('max', 5);
-    
-    bookChapters.textContent = 5;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 thessalonians'){
-  
-    $('#bibleInputNo').setAttribute('max', 3);
-    
-    bookChapters.textContent = 3;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 timothy'){
-  
-    $('#bibleInputNo').setAttribute('max', 6);
-    
-    bookChapters.textContent = 6;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 timothy'){
-  
-    $('#bibleInputNo').setAttribute('max', 4);
-    
-    bookChapters.textContent = 4;
-    
-  }
-else if(bibleInput.toLowerCase() === 'titus'){
-  
-    $('#bibleInputNo').setAttribute('max', 3);
-    
-    bookChapters.textContent = 3;
-    
-  }
-else if(bibleInput.toLowerCase() === 'philemon'){
-  
-    $('#bibleInputNo').setAttribute('max', 1);
-    
-    bookChapters.textContent = 1;
-    
-  }
-else if(bibleInput.toLowerCase() === 'hebrews'){
-  
-    $('#bibleInputNo').setAttribute('max', 13);
-    
-    bookChapters.textContent = 13;
-    
-  }
-else if(bibleInput.toLowerCase() === 'james'){
-  
-    $('#bibleInputNo').setAttribute('max', 5);
-    
-    bookChapters.textContent = 5;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 peter'){
-  
-    $('#bibleInputNo').setAttribute('max', 5);
-    
-    bookChapters.textContent = 5;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 peter'){
-  
-    $('#bibleInputNo').setAttribute('max', 3);
-    
-    bookChapters.textContent = 3;
-    
-  }
-else if(bibleInput.toLowerCase() === '1 john'){
-  
-    $('#bibleInputNo').setAttribute('max', 5);
-    
-    bookChapters.textContent = 5;
-    
-  }
-else if(bibleInput.toLowerCase() === '2 john'){
-  
-    $('#bibleInputNo').setAttribute('max', 1);
-    
-    bookChapters.textContent = 1;
-    
-  }
-else if(bibleInput.toLowerCase() === '3 john'){
-  
-    $('#bibleInputNo').setAttribute('max', 1);
-    
-    bookChapters.textContent = 1;
-    
-  }
-else if(bibleInput.toLowerCase() === 'jude'){
-  
-    $('#bibleInputNo').setAttribute('max', 1);
-    
-    bookChapters.textContent = 1;
-    
-  }
-else if(bibleInput.toLowerCase() === 'revelation'){
-  
-    $('#bibleInputNo').setAttribute('max', 22);
-    
-    bookChapters.textContent = 22;
+  outputBible.data.verses.map(e => {
+      return e.text;
+    }).forEach((e, index) => {
 
-    }
+paragraph = document.createElement('p');
 
+paragraph.textContent = `v${Number((index + 1))}: ${e}`;
 
-bibleContent.innerHTML = null;
+bibleContent.append(paragraph);
 
-axios.get(url)
-  .then((outputBible)=>{
+flex($("#pagination"));
 
-
-//console.log(outputBible);
-
-
-outputBible.data.verses.map(e=>{
-  return e.text;
-}).forEach((e,index)=>{
-  
-  paragraph = document.createElement('p');
-  
-  paragraph.textContent =`v${Number((index + 1))}: ${e}`;
-  
-  bibleContent.append(paragraph);
-
-  flex($("#pagination"));
-
-  
 })
-
-
 
 bookRight.textContent = outputBible.data.translation_note;
+
 bookName.textContent = outputBible.data.reference.slice(outputBible.data.reference.indexOf(' ') + 1, outputBible.data.reference.indexOf(' ') + 2);
+
 bookTrans.textContent = outputBible.data.translation_name;
-bookChapterActive.textContent = outputBible.data.reference.slice(0, outputBible.data.reference.indexOf(' '));
 
-//
-$$('#bibleContent p').forEach(para=>{
-  para.addEventListener('dblclick',(ev)=>{
-    copyText(ev.target.textContent);
-  });
-})
+bookName.textContent = outputBible.data.reference;
 
-grid($("footer"));
 
-}).catch((err)=>{
+  $$('#bibleContent p').forEach(para => {
+      para.addEventListener('dblclick', (ev) => {
+        copyText(ev.target.textContent);
+      });
+    })
 
-  universalOn('Book could not be found. Please type the correct book in its field and value as well');
-  
-  skeletonAppend($('#bibleContent'),20);
+    grid($("footer"));
 
-  grid($("footer"));
+  } catch (err) {
 
-})
+    universalOn('Book could not be found. Please type the correct book in its field and value as well');
+
+    skeletonAppend($('#bibleContent'), 20);
+
+    grid($("footer"));
+
+  }
 
 }
 
@@ -777,42 +382,37 @@ document.onkeydown = function(evt) {
 // Close of the universal modal using the escape key
 
 
-function booksFetch(){
+async function booksFetch() {
+  try {
+    const booksData = await axios.get('booksOfTheBible.json');
+    const oldBooks = booksData.data.filter(book => book.type == 'old');
+    const newBooks = booksData.data.filter(book => book.type == 'new');
 
-axios.get(`booksOfTheBible.json`)
-.then((booksData)=>{
+    booksData.data.map(book => {
+      let chapters = $("#chapters");
+      let span = createEl('span');
+      span.textContent = book.name;
+      span.setAttribute('data-book', book.name);
+      span.setAttribute('data-number', book.chapters);
+      chapters.append(span);
 
-const oldBooks = booksData.data.filter(book=>book.type == 'old');
-  
-const newBooks = booksData.data.filter(book=>book.type == 'new');
-  
+      function removeSpnActive() {
+        $$("#chapters span").forEach(spn => {
+          spn.classList.remove("span-active");
+        });
+      }
 
-  booksData.data.map(book=>{
-    let chapters = $("#chapters");
-    let span = createEl('span');
-    span.textContent = book.name;
-    span.setAttribute('data-book',book.name);
-    span.setAttribute('data-number',book.chapters);
-    chapters.append(span);
-
-    function removeSpnActive(){
-      $$("#chapters span").forEach(spn=>{
-      spn.classList.remove("span-active");
-      })
-    }
-
-    $$("#chapters span").forEach(spn=>{
-      spn.addEventListener('click',(ev)=>{
-      $("#bibleInput").value = ev.currentTarget.dataset.book;
-      removeSpnActive();
-      ev.currentTarget.classList.add("span-active");
-      })
-    })
-
-
-  });
-
-})
+      $$("#chapters span").forEach(spn => {
+        spn.addEventListener('click', (ev) => {
+          $("#bibleInput").value = ev.currentTarget.dataset.book;
+          removeSpnActive();
+          ev.currentTarget.classList.add("span-active");
+        });
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 booksFetch();
