@@ -33,7 +33,7 @@
   --faded: rgba(5, 6, 8, 0.2);
   --theme: var(--lime);
   --black: var(--smoke);
-  --background: #000;
+  --background: #222;
 }
 
 .flex-column{
