@@ -33,7 +33,7 @@
   --faded: rgba(5, 6, 8, 0.2);
   --theme: var(--lime);
   --black: var(--smoke);
-  --background: #17181c;
+  --background: #000;
 }
 
 .flex-column{
@@ -119,7 +119,7 @@
 }
 
 body {
-  background-color:  #363636;
+  background-color:  #222;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -473,7 +473,6 @@ to{opacity: .9;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: .1px solid #222;
   display: none;
   place-items: center;
   grid-template-columns: auto 30px;
@@ -481,7 +480,7 @@ to{opacity: .9;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: .1px solid #222;
+  border: .1px solid var(--tomato);
 }
 
 #content{
@@ -655,7 +654,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   border-radius: 5px;
   font-family: var(--robo);
   background:  #222;
-  border: .1px solid #222 !important;
+  border: .1px solid #000 !important;
   align-self: stretch;
   
 }
@@ -874,14 +873,12 @@ p{
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 10px;
-  border: .1px solid #000813 !important;
+  border: .1px solid #000 !important;
   padding: 10px;
   background:  #222;
   min-width: 20px;
   border-radius: 10px;
   z-index: 3;
-  border: .1px solid #222 !important;
-
 }
 
 #pagination p{
@@ -922,7 +919,7 @@ caret-color: var(--theme);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: .1px solid #222;
+  border: .1px solid #000;
 }
 
 #query fieldset:last-child{
@@ -934,7 +931,7 @@ caret-color: var(--theme);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: .1px solid #222;
+  border: .1px solid #000;
 }
 
 #query legend{
