@@ -501,3 +501,7 @@ $("#books").addEventListener('click',function(){
 ev.stopPropagation();
   })
   
+  
+  setTimeout(()=>{
+none($('#opening'))
+  },2000);
