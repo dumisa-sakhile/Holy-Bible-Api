@@ -727,6 +727,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 }
 
 #chapters{
+  padding-bottom: 10px;
  display: -webkit-box;
  display: -ms-flexbox;
  display: flex;
@@ -765,7 +766,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     -webkit-backdrop-filter: blur(16px) saturate(180%);
             backdrop-filter: blur(16px) saturate(180%);
     font-size: .9rem;
-    border: .1px solid #222;
+    border: .1px solid #000;
     font-size: 1rem;
     
 }
